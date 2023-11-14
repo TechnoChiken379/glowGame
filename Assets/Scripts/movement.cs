@@ -24,16 +24,19 @@ public class movement : MonoBehaviour
 
             transform.Translate(Vector3.up * speed * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.S) /*&& transform.position.y > -maxValue*/)
+        if (Input.GetKey(KeyCode.S) /*&& transform.position.y > -maxValue*/)
         {
 
             transform.Translate(Vector3.down * speed * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.D) /*&& transform.position.y < minValue*/)
+        }
+        if (Input.GetKey(KeyCode.D) /*&& transform.position.y < minValue*/)
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
-        } else if (Input.GetKey(KeyCode.A) /*&& transform.position.y > maxValue*/)
+        }
+        if (Input.GetKey(KeyCode.A) /*&& transform.position.y > maxValue*/)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
+
     }
 }
