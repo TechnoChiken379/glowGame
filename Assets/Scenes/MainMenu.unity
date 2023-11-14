@@ -2152,7 +2152,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1387867192}
-  - component: {fileID: 1387867193}
   m_Layer: 0
   m_Name: MiddlePoint
   m_TagString: Untagged
@@ -2176,18 +2175,6 @@ Transform:
   - {fileID: 1701793988}
   m_Father: {fileID: 1388820488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1387867193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1387867191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1582194c4a494be478081a5712b5a4de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1388820487
 GameObject:
   m_ObjectHideFlags: 0
