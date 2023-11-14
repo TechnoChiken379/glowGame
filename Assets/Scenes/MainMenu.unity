@@ -384,7 +384,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 219851714}
-  - component: {fileID: 219851715}
   m_Layer: 0
   m_Name: Main Character
   m_TagString: Untagged
@@ -409,18 +408,12 @@ Transform:
   - {fileID: 1701793988}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &230648599
 GameObject:
-=======
---- !u!114 &219851715
-MonoBehaviour:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 230648600}
@@ -989,14 +982,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
-  m_GameObject: {fileID: 219851713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffce8b3946297744ab710d3bea533bd3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
->>>>>>> Stashed changes
 --- !u!1 &910052478
 GameObject:
   m_ObjectHideFlags: 0
