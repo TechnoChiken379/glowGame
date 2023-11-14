@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class movement : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class movement : MonoBehaviour
     float maxXValue = 8.6f;
     float maxYValue = 4.7f;
     public float speed = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //movement
         if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue)
         {
 
@@ -37,6 +41,11 @@ public class movement : MonoBehaviour
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
+        //look at me
+        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        var angel =Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
+        transform.rotation = quaternion.AxisAngle(Angle, Vector3.forward);
+
 
     }
 }
