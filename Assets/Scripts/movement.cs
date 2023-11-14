@@ -41,10 +41,10 @@ public class movement : MonoBehaviour
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-        //look at me
-        var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        var angel =Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
-        transform.rotation = quaternion.AxisAngle(Angle, Vector3.forward);
+        ////look at me
+        //var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        //var angle =Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
 
     }
