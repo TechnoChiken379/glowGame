@@ -22,30 +22,31 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //movement
-        if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue)
-        {
+        Move();
+    }
 
-            transform.Translate(Vector3.up * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue)
+    void Move()
+    {
+        if (characterCube.canMove == true)
         {
+            if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue)
+            {
 
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue)
-        {
-            transform.Translate(Vector3.right * speed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.A) && transform.position.x > -maxXValue)
-        {
-            transform.Translate(Vector3.left * speed * Time.deltaTime);
-        }
-        ////look at me
-        //var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
-        //var angle =Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        //transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue)
+            {
 
-
+                transform.Translate(Vector3.down * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue)
+            {
+                transform.Translate(Vector3.right * speed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A) && transform.position.x > -maxXValue)
+            {
+                transform.Translate(Vector3.left * speed * Time.deltaTime);
+            }
+        }
     }
 }
