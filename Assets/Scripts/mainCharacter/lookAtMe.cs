@@ -8,11 +8,11 @@ using static UnityEngine.GraphicsBuffer;
 public class lookAtMe : MonoBehaviour
 {
     //var
-    
+    public float Rotation;
     // Start is called before the first frame update
     void Start()
     {
-    
+        //transform.localRotation = Quaternion.Euler(0f, 0f, zRotation);
     }
         
 
@@ -20,6 +20,8 @@ public class lookAtMe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Rotation = transform.localEulerAngles.z;
+        
         //look at me
         var dir = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
