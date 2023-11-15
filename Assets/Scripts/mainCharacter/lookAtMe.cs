@@ -8,7 +8,7 @@ using static UnityEngine.GraphicsBuffer;
 public class lookAtMe : MonoBehaviour
 {
     //var
-    public float Rotation;
+    public static float Rotation;
     // Start is called before the first frame update
     void Start()
     {
