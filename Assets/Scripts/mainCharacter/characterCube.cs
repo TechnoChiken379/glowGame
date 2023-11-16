@@ -5,7 +5,11 @@ using UnityEngine;
 public class characterCube : MonoBehaviour
 {
     //var
-    public static bool canMove = true;
+    public static bool canMoveUp = true;
+    public static bool canMoveRight = true;
+    public static bool canMoveDown = true;
+    public static bool canMoveLeft = true;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,17 +19,39 @@ public class characterCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-    }
+    //canMoveUp = true;
+    //canMoveRight = true;
+    //canMoveDown = true;
+    //canMoveLeft = true;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+
+    }
+    void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is with an object
-        if (collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle") && movement.isMovingUp == true)
         {
-            //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            canMoveUp = false;
             Debug.Log("Obstacle detected!");
         }
-        
-    }
+        if (collision.gameObject.CompareTag("Obstacle") && movement.isMovingRight == true)
+        {
+            canMoveRight = false;
+            Debug.Log("Obstacle detected!");
+        }
+        if (collision.gameObject.CompareTag("Obstacle") && movement.isMovingDown == true)
+        {
+            canMoveDown = false;
+            Debug.Log("Obstacle detected!");
+        }
+        if (collision.gameObject.CompareTag("Obstacle") && movement.isMovingLeft == true)
+        {
+            canMoveLeft = false;
+            Debug.Log("Obstacle detected!");
+        }
+
+        }
+
+    
 }
