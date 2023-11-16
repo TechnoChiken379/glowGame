@@ -15,7 +15,7 @@ public class characterCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
+        //transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,11 +25,7 @@ public class characterCube : MonoBehaviour
         {
             //GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             Debug.Log("Obstacle detected!");
-            canMove = false;
         }
-        else
-        {
-            canMove = true;
-        }
+        
     }
 }

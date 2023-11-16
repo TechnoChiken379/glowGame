@@ -27,8 +27,7 @@ public class movement : MonoBehaviour
 
     void Move()
     {
-        if (characterCube.canMove == true)
-        {
+        
             if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue)
             {
 
@@ -47,6 +46,6 @@ public class movement : MonoBehaviour
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
             }
-        }
+        
     }
 }
