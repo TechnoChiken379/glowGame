@@ -63,9 +63,9 @@ public class movement : MonoBehaviour
                 isMovingLeft = true;
             }
 
-        characterCube.canMoveUp = true;
-        characterCube.canMoveRight = true;
-        characterCube.canMoveDown = true;
-        characterCube.canMoveLeft = true;
+        //characterCube.canMoveUp = true;
+        //characterCube.canMoveRight = true;
+        //characterCube.canMoveDown = true;
+        //characterCube.canMoveLeft = true;
     }
 }
