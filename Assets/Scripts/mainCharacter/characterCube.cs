@@ -9,6 +9,8 @@ public class characterCube : MonoBehaviour
     public static bool canMoveRight = true;
     public static bool canMoveDown = true;
     public static bool canMoveLeft = true;
+
+    public static float HP = 100f;
     
     // Start is called before the first frame update
     void Start()
