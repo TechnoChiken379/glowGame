@@ -25,7 +25,10 @@ public class characterCube : MonoBehaviour
     //canMoveRight = true;
     //canMoveDown = true;
     //canMoveLeft = true;
-
+    if (HP < 1)
+        {
+            Debug.Log("player died!");
+        }
 
 
     }
