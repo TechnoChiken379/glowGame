@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 31210049}
   bulletSpawnPoint: {fileID: 1450665918}
-  fireSpeed: 20
+  fireSpeed: 2500
 --- !u!1 &1757262945
 GameObject:
   m_ObjectHideFlags: 0
