@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class grunt : MonoBehaviour
@@ -12,17 +13,19 @@ public class grunt : MonoBehaviour
     float maxYValue = 4.7f;
     public float gruntSpeed = 2;
 
-    public static float gruntHP = 10;
+    public float gruntHP = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        gruntXPosition = 5;
+        gruntYPosition = 5;
+}
 
     // Update is called once per frame
     void Update()
     {
         Grunt();
+        
     }
 
     void Grunt()
@@ -47,6 +50,16 @@ public class grunt : MonoBehaviour
         if (player.transform.position.x < transform.position.x && transform.position.x > -maxXValue)
         {
             gruntXPosition += -gruntSpeed * Time.deltaTime;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("mainCharacter"))
+        {
+            Destroy(transform.gameObject);
+            Debug.Log("Obstacle detected!");
+            characterCube.HP -= 10;
         }
     }
 }
