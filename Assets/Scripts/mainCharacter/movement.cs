@@ -42,6 +42,7 @@ public class movement : MonoBehaviour
 
                 transform.Translate(Vector3.up * speed * Time.deltaTime);
                 isMovingUp = true;
+                characterCube.canMoveDown = true;
             } 
 
             if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue && characterCube.canMoveDown == true)
@@ -49,18 +50,21 @@ public class movement : MonoBehaviour
 
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 isMovingDown = true;
+                characterCube.canMoveUp = true;
             }
 
             if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue && characterCube.canMoveRight == true)
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
                 isMovingRight = true;
+                characterCube.canMoveLeft = true;
             }
 
         if (Input.GetKey(KeyCode.A) && transform.position.x > -maxXValue && characterCube.canMoveLeft == true)
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
                 isMovingLeft = true;
+                characterCube.canMoveRight = true;
             }
 
         //characterCube.canMoveUp = true;
