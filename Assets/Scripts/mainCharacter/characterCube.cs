@@ -52,6 +52,14 @@ public class characterCube : MonoBehaviour
         }
 
         }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        canMoveUp = true;
+        canMoveRight = true;
+        canMoveDown = true;
+        canMoveLeft = true;
 
-    
+
+    }
+
 }

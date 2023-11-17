@@ -30,42 +30,40 @@ public class movement : MonoBehaviour
         isMovingRight = false;
         isMovingDown = false;
         isMovingLeft = false;
- 
         Move();
     }
 
     void Move()
     {
         
-            if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue && characterCube.canMoveUp == true)
-            {
+        if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue && characterCube.canMoveUp == true)
+        {
 
-                transform.Translate(Vector3.up * speed * Time.deltaTime);
-                isMovingUp = true;
-                characterCube.canMoveDown = true;
-            } 
+               transform.Translate(Vector3.up * speed * Time.deltaTime);
+               isMovingUp = true;
+        }
 
-            if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue && characterCube.canMoveDown == true)
+        if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue && characterCube.canMoveDown == true)
             {
 
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 isMovingDown = true;
-                characterCube.canMoveUp = true;
             }
+        
 
-            if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue && characterCube.canMoveRight == true)
+        if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue && characterCube.canMoveRight == true)
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
                 isMovingRight = true;
-                characterCube.canMoveLeft = true;
             }
+        
 
         if (Input.GetKey(KeyCode.A) && transform.position.x > -maxXValue && characterCube.canMoveLeft == true)
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
                 isMovingLeft = true;
-                characterCube.canMoveRight = true;
             }
+        
 
         //characterCube.canMoveUp = true;
         //characterCube.canMoveRight = true;
