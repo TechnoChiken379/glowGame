@@ -11,6 +11,8 @@ public class grunt : MonoBehaviour
     float maxXValue = 8.6f;
     float maxYValue = 4.7f;
     public float gruntSpeed = 2;
+
+    public static float gruntHP = 10;
     // Start is called before the first frame update
     void Start()
     {
