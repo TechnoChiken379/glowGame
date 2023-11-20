@@ -31,6 +31,8 @@ public class characterCube : MonoBehaviour
         }
 
     }
+
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the collision is with an object
@@ -55,7 +57,7 @@ public class characterCube : MonoBehaviour
             Debug.Log("Obstacle detected!");
         }
 
-        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))

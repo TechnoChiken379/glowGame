@@ -2365,6 +2365,10 @@ MonoBehaviour:
   gruntXPosition: 0
   gruntYPosition: 0
   gruntSpeed: 3
+<<<<<<< Updated upstream
+=======
+  gruntHP: 10
+>>>>>>> Stashed changes
 --- !u!61 &874228177
 BoxCollider2D:
   m_ObjectHideFlags: 0

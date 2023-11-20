@@ -26,10 +26,10 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isMovingUp = false;
-        isMovingRight = false;
-        isMovingDown = false;
-        isMovingLeft = false;
+        //isMovingUp = false;
+        //isMovingRight = false;
+        //isMovingDown = false;
+        //isMovingLeft = false;
         Move();
     }
 
@@ -41,6 +41,9 @@ public class movement : MonoBehaviour
 
                transform.Translate(Vector3.up * speed * Time.deltaTime);
                isMovingUp = true;
+        } else
+        {
+            isMovingUp = false;
         }
 
         if (Input.GetKey(KeyCode.S) && transform.position.y > -maxYValue && characterCube.canMoveDown == true)
@@ -49,21 +52,33 @@ public class movement : MonoBehaviour
                 transform.Translate(Vector3.down * speed * Time.deltaTime);
                 isMovingDown = true;
             }
-        
+        else
+        {
+            isMovingDown = false;
+        }
+
 
         if (Input.GetKey(KeyCode.D) && transform.position.x < maxXValue && characterCube.canMoveRight == true)
             {
                 transform.Translate(Vector3.right * speed * Time.deltaTime);
                 isMovingRight = true;
             }
-        
+        else
+        {
+            isMovingRight = false;
+        }
+
 
         if (Input.GetKey(KeyCode.A) && transform.position.x > -maxXValue && characterCube.canMoveLeft == true)
             {
                 transform.Translate(Vector3.left * speed * Time.deltaTime);
                 isMovingLeft = true;
             }
-        
+        else
+        {
+            isMovingLeft = false;
+        }
+
 
         //characterCube.canMoveUp = true;
         //characterCube.canMoveRight = true;
