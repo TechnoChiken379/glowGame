@@ -13,7 +13,7 @@ public class DamageCollision : MonoBehaviour
 
     }
 
-// Updated upstream
+<<<<<<< Updated upstream
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<BoxCollider2D>() != null)
