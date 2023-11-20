@@ -22,10 +22,6 @@ public class damageScript : MonoBehaviour
         {
             grunt.gruntHP =- 1;
         }
-        if (1>2)
-        {
-
-        }
     }
 
 
