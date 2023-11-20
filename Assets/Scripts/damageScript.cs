@@ -20,7 +20,7 @@ public class damageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            grunt.gruntHP =- 1;
+            //grunt.gruntHP =- 1;
         }
     }
 

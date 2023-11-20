@@ -26,13 +26,6 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-<<<<<<< Updated upstream
-=======
-        //isMovingUp = false;
-        //isMovingRight = false;
-        //isMovingDown = false;
-        //isMovingLeft = false;
->>>>>>> Stashed changes
         Move();
     }
 
