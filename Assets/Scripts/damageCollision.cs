@@ -13,6 +13,7 @@ public class DamageCollision : MonoBehaviour
 
     }
 
+<<<<<<< Updated upstream
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.GetComponent<BoxCollider2D>() != null)
@@ -21,5 +22,14 @@ public class DamageCollision : MonoBehaviour
             Destroy(gameObject);
         }
     }
+=======
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+    }
+
+
+
+>>>>>>> Stashed changes
 }
 
