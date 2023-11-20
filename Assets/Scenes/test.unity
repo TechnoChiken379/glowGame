@@ -281,7 +281,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 31210049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 429ab7ec5209e724a975cfee93ecd6e5, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f9f28a237d44d44499aaecc8a3c907a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &41330234
@@ -2365,8 +2365,6 @@ MonoBehaviour:
   gruntXPosition: 0
   gruntYPosition: 0
   gruntSpeed: 3
-  gruntHP: 10
-  maxHealth: 10
 --- !u!61 &874228177
 BoxCollider2D:
   m_ObjectHideFlags: 0

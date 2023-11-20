@@ -13,7 +13,7 @@ public class grunt : MonoBehaviour
     float maxYValue = 4.7f;
     public float gruntSpeed = 2;
 
-    public float gruntHP = 10;
+    public static float gruntHP = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +60,10 @@ public class grunt : MonoBehaviour
             Destroy(transform.gameObject);
             Debug.Log("Obstacle detected!");
             characterCube.HP -= 10;
+        }
+        if (gruntHP == 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
