@@ -23,10 +23,5 @@ public class damageScript : MonoBehaviour
             grunt.gruntHP -= 1;
             Debug.Log("FirstStepWorks");
         }
-        if (grunt.gruntHP == 0)
-        {
-            Debug.Log("SecondStepWorks");
-            Destroy(gameObject);
-        }
     }
 }

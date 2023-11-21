@@ -19,7 +19,7 @@ public class grunt : MonoBehaviour
     {
         gruntXPosition = 5;
         gruntYPosition = 5;
-}
+    }
 
     // Update is called once per frame
     void Update()
@@ -60,6 +60,11 @@ public class grunt : MonoBehaviour
             Destroy(transform.gameObject);
             Debug.Log("Obstacle detected!");
             characterCube.HP -= 10;
+        }
+        if (grunt.gruntHP == 0)
+        {
+            Debug.Log("SecondStepWorks");
+            Destroy(gameObject);
         }
     }
 }
