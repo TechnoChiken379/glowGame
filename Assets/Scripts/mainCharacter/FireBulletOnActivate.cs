@@ -29,7 +29,7 @@ public class FireBulletOnActivate : MonoBehaviour
             GameObject spawnedBullet = Instantiate(bullet);
             spawnedBullet.transform.position = bulletSpawnPoint.position;
             spawnedBullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * fireSpeed * Time.deltaTime;
-            Destroy(spawnedBullet, 5);
+            Destroy(spawnedBullet, 2);
         }
         
     }
