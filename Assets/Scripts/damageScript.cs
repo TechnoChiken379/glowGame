@@ -20,13 +20,13 @@ public class damageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemy"))
         {
-            grunt.gruntHP =- 1;
+            grunt.gruntHP -= 1;
             Debug.Log("FirstStepWorks");
         }
         if (grunt.gruntHP == 0)
         {
-            Destroy(gameObject);
             Debug.Log("SecondStepWorks");
+            Destroy(gameObject);
         }
     }
 }
