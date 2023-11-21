@@ -57,6 +57,29 @@ public class characterCube : MonoBehaviour
             Debug.Log("Obstacle detected!");
         }
 
+        //ContactPoint2D contact = collision.contacts[0];
+        //Vector2 normal = contact.normal;
+
+        //if (normal == Vector2.up)
+        //{
+        //    canMoveUp = false;
+        //    Debug.Log("Obstacle detected!");
+        //}
+        //else if (normal == Vector2.down)
+        //{
+        //    canMoveDown = false;
+        //    Debug.Log("Obstacle detected!");
+        //}
+        //else if (normal == Vector2.right)
+        //{
+        //    canMoveRight = false;
+        //    Debug.Log("Obstacle detected!");
+        //}
+        //else if (normal == Vector2.left)
+        //{
+        //    canMoveLeft = false;
+        //    Debug.Log("Obstacle detected!");
+        //}
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -67,7 +90,7 @@ public class characterCube : MonoBehaviour
             canMoveDown = true;
             canMoveLeft = true;
         }
-
+        
     }
 
     //private void OnCollisionStay2D(Collision2D collision)
