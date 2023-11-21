@@ -23,10 +23,6 @@ public class damageScript : MonoBehaviour
         {
             grunt.gruntHP =- 1;
         }
-        if (1>2)
-        {
-
-        }
     }
 =======
 //    void Damage(Collision collision)
