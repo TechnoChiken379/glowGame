@@ -31,7 +31,7 @@ public class movement : MonoBehaviour
 
     void Move()
     {
-        
+        //does movement
         if (Input.GetKey(KeyCode.W) && transform.position.y < maxYValue && characterCube.canMoveUp == true)
         {
 
@@ -74,11 +74,5 @@ public class movement : MonoBehaviour
         {
             isMovingLeft = false;
         }
-
-
-        //characterCube.canMoveUp = true;
-        //characterCube.canMoveRight = true;
-        //characterCube.canMoveDown = true;
-        //characterCube.canMoveLeft = true;
     }
 }
