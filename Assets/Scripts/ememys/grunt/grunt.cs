@@ -61,11 +61,11 @@ public class grunt : MonoBehaviour
             Debug.Log("Obstacle detected!");
             characterCube.HP -= 10;
         }
-        if (grunt.gruntHP == 0)
-        {
-            Debug.Log("SecondStepWorks");
-            Destroy(gameObject);
-        }
+        //    if (grunt.gruntHP == 0)
+        //    {
+        //        Debug.Log("SecondStepWorks");
+        //        Destroy(gameObject);
+        //    }
     }
 }
 
