@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class damageScript : MonoBehaviour
@@ -22,6 +23,14 @@ public class damageScript : MonoBehaviour
         {
             grunt.gruntHP -= 1;
             Debug.Log("FirstStepWorks");
+        }
+        if (grunt.gruntHP == 0)
+        {
+            if (collision.tag.Equals("enemy"))
+            {
+                Debug.Log("WORKING");
+                Destroy(hit.collider.gameObject);
+            }
         }
     }
 }
