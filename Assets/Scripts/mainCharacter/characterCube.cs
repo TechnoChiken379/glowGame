@@ -5,10 +5,6 @@ using UnityEngine;
 public class characterCube : MonoBehaviour
 {
     //var
-    //public static bool canMoveUp = true;
-    //public static bool canMoveRight = true;
-    //public static bool canMoveDown = true;
-    //public static bool canMoveLeft = true;
 
     public static float HP = 100f;
     
