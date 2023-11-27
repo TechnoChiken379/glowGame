@@ -18,8 +18,22 @@ public class grunt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gruntXPosition = 5;
-        gruntYPosition = 5;
+        var UOrD = Random.Range(0, 2);
+        if (UOrD == 0)
+        {
+            gruntYPosition = Random.Range(5, 10);
+        } else if (UOrD == 1)
+        {
+            gruntYPosition = Random.Range(-5, -10);
+        }
+        var lOrR = Random.Range(0, 2);
+        if (lOrR == 0)
+        {
+            gruntXPosition = Random.Range(9, 14);
+        } else if (lOrR == 1)
+        {
+            gruntXPosition = Random.Range(-9, -14);
+        }
 
         gruntHP = gruntMaxHP;
     }
