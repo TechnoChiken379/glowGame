@@ -3966,6 +3966,8 @@ MonoBehaviour:
   bullet: {fileID: 31210049}
   bulletSpawnPoint: {fileID: 1450665918}
   fireSpeed: 2500
+  timer: 0
+  canFire: 0.25
 --- !u!1 &1730178723
 GameObject:
   m_ObjectHideFlags: 0
