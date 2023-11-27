@@ -41,11 +41,31 @@ public class damageScript : MonoBehaviour
         }
     }
 
-    //private void OnCollisionStay2D(Collision2D collision)
+    //void OnCollisionEnter2D(Collision2D collision)
     //{
-    //    if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
+    //    //gruntHealth = GetComponent<grunt>();
+    //    if (collision.gameObject.CompareTag("enemy"))
     //    {
-    //        enemyComponent.DamageDealt(1);
+    //        enemy = collision.gameObject;
+    //        gruntHealth = enemy.GetComponent<grunt>();
+    //        gruntHealth.DamageDealt(1);
+    //    }
+    //    if (grunt.gruntHP == 0)
+    //    {
+    //        if (collision.gameObject.CompareTag("enemy"))
+    //        {
+    //            Debug.Log("WORKING");
+    //            Destroy(collision.gameObject);
+    //        }
     //    }
     //}
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
+        {
+            enemyComponent.DamageDealt(1);
+            Destroy(gameObject);
+        }
+    }
 }
