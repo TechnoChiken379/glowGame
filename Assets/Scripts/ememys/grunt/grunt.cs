@@ -13,12 +13,15 @@ public class grunt : MonoBehaviour
     float maxYValue = 4.7f;
     public float gruntSpeed = 2;
 
-    public static float gruntHP = 10;
+    public static float gruntHP, gruntMaxHP = 30f;
+
     // Start is called before the first frame update
     void Start()
     {
         gruntXPosition = 5;
         gruntYPosition = 5;
+
+        gruntHP = gruntMaxHP;
     }
 
     // Update is called once per frame
@@ -66,6 +69,15 @@ public class grunt : MonoBehaviour
         //        Debug.Log("SecondStepWorks");
         //        Destroy(gameObject);
         //    }
+    }
+    public void DamageDealt(float damageAmount)
+    {
+        gruntHP -= damageAmount;
+
+        if (gruntHP <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
 
