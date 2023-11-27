@@ -30,9 +30,6 @@ public class damageScript : MonoBehaviour
             enemy = collision.gameObject;
             gruntHealth = enemy.GetComponent<grunt>();
             gruntHealth.DamageDealt(1);
-
-
-           
         }
         if (grunt.gruntHP == 0)
         {
