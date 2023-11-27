@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class damageScript : MonoBehaviour
 {
-    public grunt gruntHealth;
+    private grunt gruntHealth;
     private GameObject enemy;
 
     public static float damageAmount = 0.5f;
@@ -21,29 +22,33 @@ public class damageScript : MonoBehaviour
 
     }
 
-    //void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    gruntHealth = GetComponent<grunt>();
-    //    if (collision.gameObject.CompareTag("enemy"))
-    //    {
-    //        grunt.gruntHP -= 1;
-    //        Debug.Log("FirstStepWorks");
-    //    }
-    //    if (grunt.gruntHP == 0)
-    //    {
-    //        if (collision.gameObject.CompareTag("enemy"))
-    //        {
-    //            Debug.Log("WORKING");
-    //            Destroy(collision.gameObject);
-    //        }
-    //    }
-    //}
-
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
+        //gruntHealth = GetComponent<grunt>();
+        if (collision.gameObject.CompareTag("enemy"))
         {
-            enemyComponent.DamageDealt(1);
+            enemy = collision.gameObject;
+            gruntHealth = enemy.GetComponent<grunt>();
+            gruntHealth.DamageDealt(1);
+
+
+           
+        }
+        if (grunt.gruntHP == 0)
+        {
+            if (collision.gameObject.CompareTag("enemy"))
+            {
+                Debug.Log("WORKING");
+                Destroy(collision.gameObject);
+            }
         }
     }
+
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
+    //    {
+    //        enemyComponent.DamageDealt(1);
+    //    }
+    //}
 }
