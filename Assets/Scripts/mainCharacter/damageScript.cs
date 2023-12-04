@@ -22,24 +22,24 @@ public class damageScript : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        //gruntHealth = GetComponent<grunt>();
-        if (collision.gameObject.CompareTag("enemy"))
-        {
-            enemy = collision.gameObject;
-            gruntHealth = enemy.GetComponent<grunt>();
-            gruntHealth.DamageDealt(1);
-        }
-        if (grunt.gruntHP == 0)
-        {
-            if (collision.gameObject.CompareTag("enemy"))
-            {
-                Debug.Log("WORKING");
-                Destroy(collision.gameObject);
-            }
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    //gruntHealth = GetComponent<grunt>();
+    //    if (collision.gameObject.CompareTag("enemy"))
+    //    {
+    //        enemy = collision.gameObject;
+    //        gruntHealth = enemy.GetComponent<grunt>();
+    //        gruntHealth.DamageDealt(1);
+    //    }
+    //    if (grunt.gruntHP == 0)
+    //    {
+    //        if (collision.gameObject.CompareTag("enemy"))
+    //        {
+    //            Debug.Log("WORKING");
+    //            Destroy(collision.gameObject);
+    //        }
+    //    }
+    //}
 
     //void OnCollisionEnter2D(Collision2D collision)
     //{
@@ -65,7 +65,6 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
         {
             enemyComponent.DamageDealt(1);
-            Destroy(gameObject);
         }
     }
 }

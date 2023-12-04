@@ -23,7 +23,6 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         timer += Time.deltaTime;
         FireBullet();
-        Debug.Log(Time.deltaTime);
     }
 
     public void FireBullet()
