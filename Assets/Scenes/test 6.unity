@@ -1205,7 +1205,7 @@ GameObject:
   - component: {fileID: 447510618}
   - component: {fileID: 447510620}
   - component: {fileID: 447510619}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1334,7 +1334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 535530350}
   - component: {fileID: 535530349}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerHBCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1503,7 +1503,7 @@ GameObject:
   - component: {fileID: 565303556}
   - component: {fileID: 565303555}
   - component: {fileID: 565303557}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bossHealthBarBackDrop
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1633,7 +1633,7 @@ GameObject:
   - component: {fileID: 589723083}
   - component: {fileID: 589723085}
   - component: {fileID: 589723084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bossHealthBar
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2275,6 +2275,7 @@ GameObject:
   - component: {fileID: 874228174}
   - component: {fileID: 874228176}
   - component: {fileID: 874228177}
+  - component: {fileID: 874228178}
   m_Layer: 0
   m_Name: grunt
   m_TagString: enemy
@@ -2364,7 +2365,6 @@ MonoBehaviour:
   player: {fileID: 1388820487}
   gruntXPosition: 0
   gruntYPosition: 0
-  gruntSpeed: 2
 --- !u!61 &874228177
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2410,6 +2410,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &874228178
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874228173}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 10
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &895319846
 GameObject:
   m_ObjectHideFlags: 0
@@ -2932,7 +2959,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1023005685}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: borders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2968,7 +2995,7 @@ GameObject:
   - component: {fileID: 1061358690}
   - component: {fileID: 1061358692}
   - component: {fileID: 1061358691}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -3513,7 +3540,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211212875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerHB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4122,7 +4149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1404783161}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bossHB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4798,7 +4825,7 @@ GameObject:
   - component: {fileID: 1730178724}
   - component: {fileID: 1730178726}
   - component: {fileID: 1730178725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: border
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5044,7 +5071,7 @@ GameObject:
   - component: {fileID: 1817637189}
   - component: {fileID: 1817637188}
   - component: {fileID: 1817637187}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerHealthBar
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -5186,7 +5213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1831828829}
   - component: {fileID: 1831828830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bossHBCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5401,7 +5428,7 @@ GameObject:
   - component: {fileID: 1991436068}
   - component: {fileID: 1991436070}
   - component: {fileID: 1991436069}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerHealthBarBackDrop
   m_TagString: Obstacle
   m_Icon: {fileID: 0}

@@ -65,6 +65,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
         {
             enemyComponent.DamageDealt(1);
+            Destroy(transform.gameObject);
         }
     }
 }
