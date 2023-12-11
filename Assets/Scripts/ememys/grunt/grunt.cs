@@ -6,36 +6,64 @@ using UnityEngine;
 public class grunt : MonoBehaviour
 {
     public GameObject player;
-    public float gruntXPosition;
-    public float gruntYPosition;
+    private Transform characterCubePosition;
+    public float gruntXPosition = 8.6f;
+    public float gruntYPosition = 4.7f;
 
-    float maxXValue = 8.6f;
-    float maxYValue = 4.7f;
-    public float gruntSpeed = 2;
-
+    private float gruntSpeed = 4f;
     public static float gruntHP, gruntMaxHP = 4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        var UOrD = Random.Range(0, 2);
-        if (UOrD == 0)
+
+        var SP = Random.Range(0, 8);
+        if (SP == 0)
         {
-            gruntYPosition = Random.Range(5, 10);
-        } else if (UOrD == 1)
+            gruntXPosition = -10.6f;
+            gruntYPosition = 6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 1)
         {
-            gruntYPosition = Random.Range(-5, -10);
-        }
-        var lOrR = Random.Range(0, 2);
-        if (lOrR == 0)
+            gruntXPosition = 0f;
+            gruntYPosition = 6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 2)
         {
-            gruntXPosition = Random.Range(9, 14);
-        } else if (lOrR == 1)
+            gruntXPosition = 10.6f;
+            gruntYPosition = 6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 3)
         {
-            gruntXPosition = Random.Range(-9, -14);
+            gruntXPosition = -10.6f;
+            gruntYPosition = 0f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 4)
+        {
+            gruntXPosition = 10.6f;
+            gruntYPosition = 0f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 5)
+        {
+            gruntXPosition = -10.6f;
+            gruntYPosition = -6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 6)
+        {
+            gruntXPosition = 0f;
+            gruntYPosition = -6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
+        } else if (SP == 7)
+        {
+            gruntXPosition = 10.6f;
+            gruntYPosition = -6.7f;
+            transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
         }
 
-        gruntHP = gruntMaxHP;
+        gruntHP = gruntMaxHP; 
+
+        characterCubePosition = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
     }
 
     // Update is called once per frame
@@ -47,27 +75,8 @@ public class grunt : MonoBehaviour
 
     void Grunt()
     {
-        transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
-        //bot up
-        if (player.transform.position.y > transform.position.y && transform.position.y < maxYValue)
-        {
-            gruntYPosition += gruntSpeed * Time.deltaTime;
-        }
-        //bot down
-        if (player.transform.position.y < transform.position.y && transform.position.y > -maxYValue)
-        {
-            gruntYPosition += -gruntSpeed * Time.deltaTime;
-        }
-        //bot right
-        if (player.transform.position.x > transform.position.x && transform.position.x < maxXValue)
-        {
-            gruntXPosition += gruntSpeed * Time.deltaTime;
-        }
-        //bot left
-        if (player.transform.position.x < transform.position.x && transform.position.x > -maxXValue)
-        {
-            gruntXPosition += -gruntSpeed * Time.deltaTime;
-        }
+        float distanceToPlayer = Vector2.Distance(transform.position, characterCubePosition.position);
+        transform.Translate((characterCubePosition.position - transform.position).normalized * Time.deltaTime * gruntSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
