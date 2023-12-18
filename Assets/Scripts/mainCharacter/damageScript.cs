@@ -9,7 +9,7 @@ public class damageScript : MonoBehaviour
     private grunt gruntHealth;
     private GameObject enemy;
 
-    public static float damageAmount = 5f;
+    public static float damageAmount = 0.5f;
     // Start is called before the first frame update
     void Start()
     {

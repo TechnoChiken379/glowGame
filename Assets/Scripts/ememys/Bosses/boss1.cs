@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class boss1 : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class boss1 : MonoBehaviour
         if (SQHP <= 0)
         {
             Destroy(gameObject);
-            //load scene
+            SceneManager.LoadScene("LEVELS");
         }
     }
 }
