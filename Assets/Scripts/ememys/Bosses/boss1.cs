@@ -5,91 +5,64 @@ using UnityEngine;
 
 public class boss1 : MonoBehaviour
 {
-    public GameObject player;
-    public float gruntXPosition;
-    public float gruntYPosition;
+    private Transform player;
 
-    float maxXValue = 8.6f;
-    float maxYValue = 4.7f;
-    public float gruntSpeed = 2;
+    public static float SQHP, SQMaxHP = 25f;
 
-    public static float gruntHP, gruntMaxHP = 4f;
+    private float fireSpeed = 12;
+    private float canFire = 0.05f;
+    private float timer;
+
+    public GameObject bullet;
+    public Transform bulletSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        var UOrD = Random.Range(0, 2);
-        if (UOrD == 0)
-        {
-            gruntYPosition = Random.Range(5, 10);
-        } else if (UOrD == 1)
-        {
-            gruntYPosition = Random.Range(-5, -10);
-        }
-        var lOrR = Random.Range(0, 2);
-        if (lOrR == 0)
-        {
-            gruntXPosition = Random.Range(9, 14);
-        } else if (lOrR == 1)
-        {
-            gruntXPosition = Random.Range(-9, -14);
-        }
+        SQHP = SQMaxHP;
 
-        gruntHP = gruntMaxHP;
+        player = GameObject.FindGameObjectWithTag("player1").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Grunt();
-        
+        timer += Time.deltaTime;
+        FireBullet();
+
     }
 
-    void Grunt()
+    public void FireBullet()
     {
-        transform.position = new Vector3(gruntXPosition, gruntYPosition, 0f);
-        //bot up
-        if (player.transform.position.y > transform.position.y && transform.position.y < maxYValue)
+        if (timer >= canFire)
         {
-            gruntYPosition += gruntSpeed * Time.deltaTime;
+            Debug.Log("Yes");
+            GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+
+            Vector2 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+            spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
+
+            Destroy(spawnedBullet, 2);
+            timer = 0f;
         }
-        //bot down
-        if (player.transform.position.y < transform.position.y && transform.position.y > -maxYValue)
-        {
-            gruntYPosition += -gruntSpeed * Time.deltaTime;
-        }
-        //bot right
-        if (player.transform.position.x > transform.position.x && transform.position.x < maxXValue)
-        {
-            gruntXPosition += gruntSpeed * Time.deltaTime;
-        }
-        //bot left
-        if (player.transform.position.x < transform.position.x && transform.position.x > -maxXValue)
-        {
-            gruntXPosition += -gruntSpeed * Time.deltaTime;
-        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            Debug.Log("Obstacle detected!");
-            characterCube.HP -= (5 * Time.deltaTime);
+            characterCube.HP -= (20 * Time.deltaTime);
         }
-        //    if (grunt.gruntHP == 0)
-        //    {
-        //        Debug.Log("SecondStepWorks");
-        //        Destroy(gameObject);
-        //    }
     }
     public void DamageDealt(float damageAmount)
     {
-        gruntHP -= damageAmount;
+        SQHP -= damageAmount;
 
-        if (gruntHP <= 0)
+        if (SQHP <= 0)
         {
             Destroy(gameObject);
+            //load scene
         }
     }
 }
