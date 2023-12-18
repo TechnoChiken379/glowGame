@@ -36,7 +36,6 @@ public class boss1 : MonoBehaviour
     {
         if (timer >= canFire)
         {
-            Debug.Log("Yes");
             GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
 
             Vector2 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
