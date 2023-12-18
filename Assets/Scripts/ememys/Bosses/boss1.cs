@@ -10,7 +10,7 @@ public class boss1 : MonoBehaviour
     public static float SQHP, SQMaxHP = 25f;
 
     private float fireSpeed = 12;
-    private float canFire = 1f;
+    private float canFire = 0.1f;
     private float timer;
 
     public GameObject bullet;
@@ -21,7 +21,7 @@ public class boss1 : MonoBehaviour
     {
         SQHP = SQMaxHP;
 
-        player = GameObject.FindGameObjectWithTag("player1").transform;
+        player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class boss1 : MonoBehaviour
     {
         timer += Time.deltaTime;
         FireBullet();
-
+        
     }
 
     public void FireBullet()
@@ -38,7 +38,7 @@ public class boss1 : MonoBehaviour
         {
             GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
 
-            Vector2 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
             spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
             Destroy(spawnedBullet, 2);
