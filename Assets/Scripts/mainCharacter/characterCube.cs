@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class characterCube : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class characterCube : MonoBehaviour
     //tracts HP 
     if (HP < 1)
         {
+            SceneManager.LoadScene("deathScreen");
             Debug.Log("player died!");
         }
 
