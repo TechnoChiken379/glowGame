@@ -58,7 +58,7 @@ public class boss1 : MonoBehaviour
     public void DamageDealt(float damageAmount)
     {
         SQHP -= damageAmount;
-
+        Debug.Log(SQHP);
         if (SQHP <= 0)
         {
             Destroy(gameObject);

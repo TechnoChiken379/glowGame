@@ -9,7 +9,7 @@ public class damageScript : MonoBehaviour
     private grunt gruntHealth;
     private GameObject enemy;
 
-    public static float damageAmount = 0.5f;
+    public static float damageAmount = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +65,12 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
         {
             enemyComponent.DamageDealt(1);
+            Destroy(transform.gameObject);
+        }
+
+        if (collision.gameObject.TryGetComponent<boss1>(out boss1 bossComponent))
+        {
+            bossComponent.DamageDealt(1);
             Destroy(transform.gameObject);
         }
     }
