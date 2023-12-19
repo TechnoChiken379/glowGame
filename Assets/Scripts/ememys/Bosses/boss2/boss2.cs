@@ -15,6 +15,11 @@ public class boss2 : MonoBehaviour
     private float timer;
 
     private float speed = 4f;
+    private float LROrUD;
+    private float UOrD;
+    private float LOrR;
+    private float shiftLR;
+    private float shiftUD;
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +50,33 @@ public class boss2 : MonoBehaviour
 
     public void Teleport()
     {
-        transform.position = new Vector3((teleportBehindPlayer.position.x - 3f), teleportBehindPlayer.position.y, 0f);
+        LROrUD = Random.Range(0, 2);
+        if (LROrUD == 0) 
+        {
+            LOrR = Random.Range(0, 2);
+            UOrD = 0f;
+            if (LOrR == 0)
+            {
+                shiftLR = -3f;
+            } else if (LOrR == 1)
+            {
+                shiftLR = 3f;
+            }
+        } else if (LROrUD == 1)
+        {
+            UOrD = Random.Range(0, 2);
+            LOrR = 0f;
+            if (UOrD == 0)
+            {
+                shiftUD = -3f;
+            }
+            else if (UOrD == 1)
+            {
+                shiftUD = 3f;
+            }
+        }
+
+        transform.position = new Vector3((teleportBehindPlayer.position.x + shiftLR), (teleportBehindPlayer.position.y + shiftUD), 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
