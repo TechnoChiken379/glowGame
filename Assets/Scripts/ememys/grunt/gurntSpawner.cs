@@ -14,7 +14,7 @@ public class gurntSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        canSpawn = 7f;
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class gurntSpawner : MonoBehaviour
         if (timer >= canSpawn)
         {
             SpawnEnemy();
+            timer = 0;
         }
     }
 
