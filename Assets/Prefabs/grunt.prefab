@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2627414837242541627}
   - component: {fileID: 6807845164375086024}
   - component: {fileID: 1373422045372011302}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: grunt
   m_TagString: enemy
   m_Icon: {fileID: 0}
