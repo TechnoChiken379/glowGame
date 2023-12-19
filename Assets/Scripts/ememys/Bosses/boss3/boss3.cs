@@ -1,0 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class boss3 : MonoBehaviour
+{
+    private Transform player;
+
+    public static float TGHP, TGMaxHP = 100f;
+
+    private float fireSpeed = 12;
+    private float canFire = 3f;
+    private float timer;
+
+    public GameObject zombieGrunt;
+    public Transform zombieGruntSpawnPoint;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        TGHP = TGMaxHP;
+
+        player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timer += Time.deltaTime;
+        FireGrunt();
+    }
+
+    public void FireGrunt()
+    {
+        if (timer >= canFire)
+        {
+            GruntSpawn();
+            GruntSpawn();
+            GruntSpawn();
+
+            timer = 0f;
+        }
+    }
+
+    public void GruntSpawn()
+    {
+        GameObject ZombieGrunt = Instantiate(zombieGrunt, zombieGruntSpawnPoint.position, Quaternion.identity);
+        Vector3 directionToPlayer = (player.position - zombieGruntSpawnPoint.position).normalized;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("mainCharacter"))
+        {
+            characterCube.HP -= 20;
+        }
+    }
+}
+
