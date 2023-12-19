@@ -75,7 +75,6 @@ public class boss2 : MonoBehaviour
                 shiftUD = 3f;
             }
         }
-
         transform.position = new Vector3((teleportBehindPlayer.position.x + shiftLR), (teleportBehindPlayer.position.y + shiftUD), 0f);
     }
 
