@@ -14,9 +14,13 @@ public class boss1 : MonoBehaviour
 
     private float fireSpeed = 10;
     private float canFire = 0.1f;
+    private float canFireSnipe = 4f;
     private float timer;
+    private float timerSnipe;
 
     public GameObject bullet;
+    public GameObject snipeBullet;
+
     public Transform bulletSpawnPoint;
 
     // Start is called before the first frame update
@@ -31,8 +35,9 @@ public class boss1 : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+        timerSnipe += Time.deltaTime;
         FireBullet();
-        
+        FireSnipeBullet();
     }
 
     public void FireBullet()
@@ -46,6 +51,21 @@ public class boss1 : MonoBehaviour
 
             Destroy(spawnedBullet, 2);
             timer = 0f;
+        }
+
+    }
+
+    public void FireSnipeBullet()
+    {
+        if (timerSnipe >= canFireSnipe)
+        {
+            GameObject spawnedSnipeBullet = Instantiate(snipeBullet, bulletSpawnPoint.position, Quaternion.identity);
+
+            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+            spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * (fireSpeed * 1.5f);
+
+            Destroy(spawnedSnipeBullet, 2);
+            timerSnipe = 0f;
         }
 
     }

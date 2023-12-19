@@ -13,7 +13,7 @@ public class boss2 : MonoBehaviour
 
     public static float IBHP, IBMaxHP = 60f;
 
-    private float canTeleport = 3.5f;
+    private float canTeleport = 4f;
     private float timer;
 
     private float speed = 4f;

@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class enemyDamageScript : MonoBehaviour
+public class enemyDamageScriptSnipe : MonoBehaviour
 {
     private grunt gruntHealth;
     private GameObject enemy;
@@ -27,7 +27,7 @@ public class enemyDamageScript : MonoBehaviour
         {
             Destroy(transform.gameObject);
             Debug.Log("Obstacle detected!");
-            characterCube.HP -= 2;
+            characterCube.HP -= 20;
         }
         //    if (grunt.gruntHP == 0)
         //    {
