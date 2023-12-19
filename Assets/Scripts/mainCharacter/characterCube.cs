@@ -8,11 +8,12 @@ public class characterCube : MonoBehaviour
     //var
 
     public static float HP = 100f;
+    public static float backUpHP;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        backUpHP = HP;
     }
 
     // Update is called once per frame

@@ -8,6 +8,8 @@ public class boss1 : MonoBehaviour
 {
     private Transform player;
 
+    [SerializeField] public characterCube characterCube;
+
     public static float SQHP, SQMaxHP = 50f;
 
     private float fireSpeed = 10;
@@ -61,6 +63,7 @@ public class boss1 : MonoBehaviour
         if (SQHP <= 0)
         {
             Destroy(gameObject);
+            characterCube.HP = characterCube.backUpHP;
             SceneManager.LoadScene("LEVELS");
         }
     }
