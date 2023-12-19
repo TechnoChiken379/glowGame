@@ -61,6 +61,7 @@ public class boss1 : MonoBehaviour
         if (SQHP <= 0)
         {
             Destroy(gameObject);
+            characterCube.HP = 100;
             SceneManager.LoadScene("LEVELS");
         }
     }

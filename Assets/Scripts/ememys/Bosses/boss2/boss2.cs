@@ -11,7 +11,7 @@ public class boss2 : MonoBehaviour
 
     public static float IBHP, IBMaxHP = 60f;
 
-    private float canTeleport = 5f;
+    private float canTeleport = 3.5f;
     private float timer;
 
     private float speed = 4f;
@@ -57,10 +57,10 @@ public class boss2 : MonoBehaviour
             UOrD = 0f;
             if (LOrR == 0)
             {
-                shiftLR = -3f;
+                shiftLR = -2f;
             } else if (LOrR == 1)
             {
-                shiftLR = 3f;
+                shiftLR = 2f;
             }
         } else if (LROrUD == 1)
         {
@@ -68,11 +68,11 @@ public class boss2 : MonoBehaviour
             LOrR = 0f;
             if (UOrD == 0)
             {
-                shiftUD = -3f;
+                shiftUD = -2f;
             }
             else if (UOrD == 1)
             {
-                shiftUD = 3f;
+                shiftUD = 2f;
             }
         }
         transform.position = new Vector3((teleportBehindPlayer.position.x + shiftLR), (teleportBehindPlayer.position.y + shiftUD), 0f);
@@ -91,6 +91,7 @@ public class boss2 : MonoBehaviour
         if (IBHP <= 0)
         {
             Destroy(gameObject);
+            characterCube.HP = 100;
             SceneManager.LoadScene("LEVELS");
         }
     }
