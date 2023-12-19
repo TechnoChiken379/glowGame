@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 public class boss2 : MonoBehaviour
 {
     private Transform player;
+    private Transform teleportBehindPlayer;
 
     public static float IBHP, IBMaxHP = 60f;
 
     private float canTeleport = 5f;
     private float timer;
 
-    private float speed = 4.5f;
+    private float speed = 4f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class boss2 : MonoBehaviour
         IBHP = IBMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+        teleportBehindPlayer = GameObject.Find("Pistol").transform;
     }
 
     // Update is called once per frame
@@ -28,6 +30,11 @@ public class boss2 : MonoBehaviour
     {
         timer += Time.deltaTime;
         Move();
+        if (timer >= canTeleport) 
+        {
+            Teleport();
+            timer = 0;
+        }
     }
 
     public void Move()
@@ -38,7 +45,7 @@ public class boss2 : MonoBehaviour
 
     public void Teleport()
     {
-
+        transform.position = new Vector3((teleportBehindPlayer.position.x - 3f), teleportBehindPlayer.position.y, 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
