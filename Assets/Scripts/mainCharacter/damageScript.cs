@@ -70,8 +70,13 @@ public class damageScript : MonoBehaviour
 
         if (collision.gameObject.TryGetComponent<boss1>(out boss1 bossComponent))
         {
-            Debug.Log("COLLIDED");
             bossComponent.DamageDealt(1);
+            Destroy(transform.gameObject);
+        }
+
+        if (collision.gameObject.TryGetComponent<boss2>(out boss2 boss2Component))
+        {
+            boss2Component.DamageDealt(1);
             Destroy(transform.gameObject);
         }
     }

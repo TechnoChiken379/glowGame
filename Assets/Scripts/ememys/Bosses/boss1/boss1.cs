@@ -8,9 +8,9 @@ public class boss1 : MonoBehaviour
 {
     private Transform player;
 
-    public static float SQHP, SQMaxHP = 25f;
+    public static float SQHP, SQMaxHP = 50f;
 
-    private float fireSpeed = 12;
+    private float fireSpeed = 10;
     private float canFire = 0.1f;
     private float timer;
 
@@ -52,13 +52,12 @@ public class boss1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= (20 * Time.deltaTime);
+            characterCube.HP -= 20;
         }
     }
     public void DamageDealt(float damageAmount)
     {
         SQHP -= damageAmount;
-        Debug.Log(SQHP);
         if (SQHP <= 0)
         {
             Destroy(gameObject);
