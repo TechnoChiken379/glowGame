@@ -4,23 +4,21 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class boss1 : MonoBehaviour
+public class boss2 : MonoBehaviour
 {
     private Transform player;
 
-    public static float SQHP, SQMaxHP = 50f;
+    public static float IBHP, IBMaxHP = 60f;
 
-    private float fireSpeed = 10;
-    private float canFire = 0.1f;
+    private float canTeleport = 5f;
     private float timer;
 
-    public GameObject bullet;
-    public Transform bulletSpawnPoint;
+    private float speed = 4.5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        SQHP = SQMaxHP;
+        IBHP = IBMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
@@ -29,22 +27,17 @@ public class boss1 : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        FireBullet();
-        
+        Move();
     }
 
-    public void FireBullet()
+    public void Move()
     {
-        if (timer >= canFire)
-        {
-            GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
+    }
 
-            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-            spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
-
-            Destroy(spawnedBullet, 2);
-            timer = 0f;
-        }
+    public void Teleport()
+    {
 
     }
 
@@ -57,8 +50,8 @@ public class boss1 : MonoBehaviour
     }
     public void DamageDealt(float damageAmount)
     {
-        SQHP -= damageAmount;
-        if (SQHP <= 0)
+        IBHP -= damageAmount;
+        if (IBHP <= 0)
         {
             Destroy(gameObject);
             SceneManager.LoadScene("LEVELS");
