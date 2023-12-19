@@ -9,6 +9,8 @@ public class boss2 : MonoBehaviour
     private Transform player;
     private Transform teleportBehindPlayer;
 
+    [SerializeField] public characterCube characterCube;
+
     public static float IBHP, IBMaxHP = 60f;
 
     private float canTeleport = 3.5f;
@@ -91,7 +93,7 @@ public class boss2 : MonoBehaviour
         if (IBHP <= 0)
         {
             Destroy(gameObject);
-            characterCube.HP = 100;
+            characterCube.HP = characterCube.backUpHP;
             SceneManager.LoadScene("LEVELS");
         }
     }

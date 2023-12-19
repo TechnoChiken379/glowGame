@@ -8,10 +8,11 @@ public class boss3 : MonoBehaviour
 {
     private Transform player;
 
+    [SerializeField] public characterCube characterCube;
+
     public static float TGHP, TGMaxHP = 100f;
 
-    private float fireSpeed = 12;
-    private float canFire = 3f;
+    private float canFire = 0.5f;
     private float timer;
 
     public GameObject zombieGrunt;
@@ -37,8 +38,6 @@ public class boss3 : MonoBehaviour
         if (timer >= canFire)
         {
             GruntSpawn();
-            GruntSpawn();
-            GruntSpawn();
 
             timer = 0f;
         }
@@ -55,6 +54,16 @@ public class boss3 : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             characterCube.HP -= 20;
+        }
+    }
+    public void DamageDealt(float damageAmount)
+    {
+        TGHP -= damageAmount;
+        if (TGHP <= 0)
+        {
+            Destroy(gameObject);
+            characterCube.HP = characterCube.backUpHP;
+            SceneManager.LoadScene("LEVELS");
         }
     }
 }

@@ -17,6 +17,8 @@ public class zombieGrunt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        var SP = Random.Range(0, 8);
+
         zombieGruntHP = zombieGruntMaxHP;
 
         characterCubePosition = GameObject.FindGameObjectWithTag("mainCharacter").transform;
