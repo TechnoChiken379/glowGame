@@ -5117,7 +5117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88059bd0b398f4429157db0696acb96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grunt: {fileID: 874228173}
+  grunt: {fileID: 192069192436357990, guid: c8ba3cc456dfdc7418caf50919525adf, type: 3}
 --- !u!1 &1325768412
 GameObject:
   m_ObjectHideFlags: 0
@@ -7148,7 +7148,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 1088
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -7653,6 +7653,10 @@ PrefabInstance:
     - target: {fileID: 192069192436357990, guid: c8ba3cc456dfdc7418caf50919525adf, type: 3}
       propertyPath: m_Name
       value: grunt
+      objectReference: {fileID: 0}
+    - target: {fileID: 192069192436357990, guid: c8ba3cc456dfdc7418caf50919525adf, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 419923588494028324, guid: c8ba3cc456dfdc7418caf50919525adf, type: 3}
       propertyPath: m_LocalPosition.x
