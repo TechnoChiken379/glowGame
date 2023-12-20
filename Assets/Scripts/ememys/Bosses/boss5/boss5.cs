@@ -34,7 +34,7 @@ public class boss5 : MonoBehaviour
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (distanceToPlayer >= closeEnough)
         {
-        transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
+            transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
         }
     }
 
