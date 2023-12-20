@@ -11,7 +11,7 @@ public class zombieGrunt : MonoBehaviour
     public float gruntXPosition = -1;
     public float gruntYPosition = 0f;
 
-    private float gruntSpeed = 5f;
+    private float gruntSpeed = 4f;
     public static float zombieGruntHP, zombieGruntMaxHP = 4f;
 
     // Start is called before the first frame update
@@ -44,7 +44,7 @@ public class zombieGrunt : MonoBehaviour
         {
             Destroy(transform.gameObject);
             Debug.Log("Obstacle detected!");
-            characterCube.HP -= 10;
+            characterCube.HP -= 7;
         }
         //    if (grunt.gruntHP == 0)
         //    {

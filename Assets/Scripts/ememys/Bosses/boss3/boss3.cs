@@ -12,7 +12,7 @@ public class boss3 : MonoBehaviour
 
     public static float TGHP, TGMaxHP = 50f;
 
-    private float canFire = 1.25f;
+    private float canFire = 1.5f;
     private float timer;
 
     public GameObject zombieGrunt;
@@ -38,11 +38,11 @@ public class boss3 : MonoBehaviour
         if (timer >= canFire)
         {
             GruntSpawn();
-            if (TGHP <= 25)
+            if (TGHP <= 20)
             {
                 GruntSpawn();
             }
-            if (TGHP <= 10)
+            if (TGHP <= 5)
             {
                 GruntSpawn();
             }

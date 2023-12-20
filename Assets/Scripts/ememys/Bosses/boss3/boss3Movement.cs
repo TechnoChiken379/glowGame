@@ -8,6 +8,10 @@ public class boss3Movement : MonoBehaviour
     public float speed = 4f;
     private float minMax = 3.5f;
     private float yPosition;
+    private float xPosition = 7.5f;
+
+    private float canSwitch = 4f;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +22,12 @@ public class boss3Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
         Moving();
+        if (timer >= canSwitch)
+        {
+            SwitchSides();
+        }
     }
 
     public void Moving()
@@ -30,6 +39,13 @@ public class boss3Movement : MonoBehaviour
             speed *= -1;
         }
 
-        transform.position = new Vector3(7.5f, yPosition, 0);
+        transform.position = new Vector3(xPosition, yPosition, 0);
+    }
+
+    private void SwitchSides()
+    {
+        xPosition *= -1;
+        transform.position = new Vector3(xPosition, yPosition, 0);
+        timer = 0;
     }
 }
