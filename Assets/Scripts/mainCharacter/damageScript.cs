@@ -9,7 +9,7 @@ public class damageScript : MonoBehaviour
     private grunt gruntHealth;
     private GameObject enemy;
 
-    public static float damageAmount = 0.5f;
+    public static float damageAmount = 1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,37 +64,43 @@ public class damageScript : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
         {
-            enemyComponent.DamageDealt(1);
+            enemyComponent.DamageDealt(damageAmount);
+            Destroy(transform.gameObject);
+        }
+
+        if (collision.gameObject.TryGetComponent<zombieGrunt>(out zombieGrunt enemyZombieComponent))
+        {
+            enemyZombieComponent.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent<boss1>(out boss1 bossComponent))
         {
-            bossComponent.DamageDealt(1);
+            bossComponent.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent<boss2>(out boss2 boss2Component))
         {
-            boss2Component.DamageDealt(1);
+            boss2Component.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent<boss3>(out boss3 boss3Component))
         {
-            boss3Component.DamageDealt(1);
+            boss3Component.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent<boss4>(out boss4 boss4Component))
         {
-            boss4Component.DamageDealt(1);
+            boss4Component.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
         if (collision.gameObject.TryGetComponent<boss5>(out boss5 boss5Component))
         {
-            boss5Component.DamageDealt(1);
+            boss5Component.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
     }
