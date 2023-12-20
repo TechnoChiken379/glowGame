@@ -84,7 +84,6 @@ public class grunt : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             Destroy(transform.gameObject);
-            Debug.Log("Obstacle detected!");
             characterCube.HP -= 10;
         }
         //    if (grunt.gruntHP == 0)
