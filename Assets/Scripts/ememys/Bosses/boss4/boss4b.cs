@@ -3,92 +3,109 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class boss4b : MonoBehaviour
 {
     private Transform player;
-    private GameObject enemy1;
 
     [SerializeField] public characterCube characterCube;
 
     public static float CGHP, CGMaxHP = 25f;
 
-    private float fireSpeed = 10;
-    private float canFire = 0.5f;
-    private float timer;
-    private float timerSnipe;
-    private float canFireSnipe = 3f;
-    private float speed = 3f;
+    //private float fireSpeed = 10;
+    //private float canFire = 0.5f;
+    //private float timer;
+    //private float timerSnipe;
+    //private float canFireSnipe = 3f;
+    private float speed = 2.5f;
 
-    private float range = 5f;
-    private float enemyRange = 3f;
 
     public GameObject bullet;
     public GameObject snipeBullet;
 
     public Transform bulletSpawnPoint;
 
-    public float minX = -5f;  // Minimum X coordinate for the border
-    public float maxX = 5f;   // Maximum X coordinate for the border
-    public float minY = -5f;  // Minimum Y coordinate for the border
-    public float maxY = 5f;   // Maximum Y coordinate for the border
+    private float xMax = 8.1f;
+    private float yMax = 4.2f;
+
+    private float xMin = -8.1f;
+    private float yMin = -4.2f;
+
+    public float xPosition;
+    public float yPosition;
+
+    private float chooseNewPosition = 2f;
+    private float moveTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
         CGHP = CGMaxHP;
-
+        moveTimer = 10;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
-        enemy1 = GameObject.FindGameObjectWithTag("Celestial Guardian");
     }
     public void Move()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        //float distanceToEnemy = Vector2.Distance(transform.position, enemy.position);
-        //if (distanceToPlayer >= range || distanceToEnemy >= enemyRange)
-        //{
-            transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
-        //}
+        transform.Translate(new Vector3(xPosition, yPosition, 0).normalized * Time.deltaTime * speed);
+        if (moveTimer >= chooseNewPosition)
+        {
+            xPosition = Random.Range(xMin, xMax);
+            yPosition = Random.Range(yMin, yMax);
+            moveTimer = 0;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        timerSnipe += Time.deltaTime;
+        //timer += Time.deltaTime;
+        //timerSnipe += Time.deltaTime;
+        moveTimer += Time.deltaTime;
 
         Move();
-        FireBullet();
-        FireSnipeBullet();
+        //FireBullet();
+        //FireSnipeBullet();
     }
-    public void FireBullet()
+    //public void FireBullet()
+    //{
+    //    if (timer >= canFire)
+    //    {
+    //        GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+
+    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+    //        spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
+
+    //        Destroy(spawnedBullet, 2);
+    //        timer = 0f;
+    //    }
+
+    //}
+
+    //public void FireSnipeBullet()
+    //{
+    //    if (timerSnipe >= canFireSnipe)
+    //    {
+    //        GameObject spawnedSnipeBullet = Instantiate(snipeBullet, bulletSpawnPoint.position, Quaternion.identity);
+
+    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+    //        spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * (fireSpeed * 1.5f);
+
+    //        Destroy(spawnedSnipeBullet, 2);
+    //        timerSnipe = 0f;
+    //    }
+
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (timer >= canFire)
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
-            GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
-
-            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-            spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
-
-            Destroy(spawnedBullet, 2);
-            timer = 0f;
+            xPosition = Random.Range(xMin, xMax);
+            yPosition = Random.Range(yMin, yMax);
+            moveTimer = 0;
         }
-
-    }
-
-    public void FireSnipeBullet()
-    {
-        if (timerSnipe >= canFireSnipe)
-        {
-            GameObject spawnedSnipeBullet = Instantiate(snipeBullet, bulletSpawnPoint.position, Quaternion.identity);
-
-            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-            spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * (fireSpeed * 1.5f);
-
-            Destroy(spawnedSnipeBullet, 2);
-            timerSnipe = 0f;
-        }
-
     }
 
     public void DamageDealt(float damageAmount)
@@ -97,8 +114,6 @@ public class boss4b : MonoBehaviour
         if (CGHP <= 0)
         {
             Destroy(gameObject);
-            characterCube.HP = characterCube.backUpHP;
-            SceneManager.LoadScene("LEVELS");
         }
     }
 }

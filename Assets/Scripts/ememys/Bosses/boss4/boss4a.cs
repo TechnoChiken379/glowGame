@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class boss4a : MonoBehaviour
 {
@@ -12,12 +13,12 @@ public class boss4a : MonoBehaviour
 
     public static float CGHP, CGMaxHP = 25f;
 
-    private float fireSpeed = 10;
-    private float canFire = 0.5f;
-    private float timer;
-    private float timerSnipe;
-    private float canFireSnipe = 3f;
-    private float speed = 3f;
+    //private float fireSpeed = 10;
+    //private float canFire = 0.5f;
+    //private float timer;
+    //private float timerSnipe;
+    //private float canFireSnipe = 3f;
+    private float speed = 2.5f;
 
 
     public GameObject bullet;
@@ -25,25 +26,43 @@ public class boss4a : MonoBehaviour
 
     public Transform bulletSpawnPoint;
 
+    private float xMax = 8.1f;
+    private float yMax = 4.2f;
+
+    private float xMin = -8.1f;
+    private float yMin = -4.2f;
+
+    public float xPosition;
+    public float yPosition;
+
+    private float chooseNewPosition = 2f;
+    private float moveTimer;
+
 
     // Start is called before the first frame update
     void Start()
     {
         CGHP = CGMaxHP;
-
+        moveTimer = 10;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
     public void Move()
-    {
-            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-            transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
+    { 
+        transform.Translate(new Vector3(xPosition, yPosition, 0).normalized * Time.deltaTime * speed);
+        if (moveTimer >= chooseNewPosition)
+        {
+            xPosition = Random.Range(xMin, xMax);
+            yPosition = Random.Range(yMin, yMax);
+            moveTimer = 0;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-        timerSnipe += Time.deltaTime;
+        //timer += Time.deltaTime;
+        //timerSnipe += Time.deltaTime;
+        moveTimer += Time.deltaTime;
 
         Move();
         //FireBullet();
@@ -79,14 +98,22 @@ public class boss4a : MonoBehaviour
 
     //}
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            xPosition = Random.Range(xMin, xMax);
+            yPosition = Random.Range(yMin, yMax);
+            moveTimer = 0;
+        }
+    }
+
     public void DamageDealt(float damageAmount)
     {
         CGHP -= damageAmount;
         if (CGHP <= 0)
         {
             Destroy(gameObject);
-            characterCube.HP = characterCube.backUpHP;
-            SceneManager.LoadScene("LEVELS");
         }
     }
 }
