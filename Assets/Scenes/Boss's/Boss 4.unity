@@ -623,7 +623,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -675,7 +675,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -699,6 +699,8 @@ MonoBehaviour:
   bullet: {fileID: 0}
   snipeBullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
+  xPosition: 0
+  yPosition: 0
 --- !u!1 &167610048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,7 +4433,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -4483,7 +4485,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -4507,6 +4509,8 @@ MonoBehaviour:
   bullet: {fileID: 0}
   snipeBullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
+  xPosition: 0
+  yPosition: 0
 --- !u!1 &839983311
 GameObject:
   m_ObjectHideFlags: 0
@@ -8932,7 +8936,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -8984,7 +8988,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 1536
@@ -9008,6 +9012,8 @@ MonoBehaviour:
   bullet: {fileID: 0}
   snipeBullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 0}
+  xPosition: 0
+  yPosition: 0
 --- !u!1 &1677143580
 GameObject:
   m_ObjectHideFlags: 0

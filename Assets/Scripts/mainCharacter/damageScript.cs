@@ -60,6 +60,9 @@ public class damageScript : MonoBehaviour
     //    }
     //}
 
+
+    // boss4 sometimes bounces bullets off without taking damage, i think this is because they are moving away from player.
+    // and because it's collision stay it doesn't have time to see the bullet
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
