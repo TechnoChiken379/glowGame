@@ -20,11 +20,15 @@ public class characterCube : MonoBehaviour
     void Update()
     {
     //tracts HP 
-    if (HP < 1)
+        if (HP < 1)
         {
             SceneManager.LoadScene("deathScreen");
             Debug.Log("player died!");
         }
-
+        if (Input.GetKey(KeyCode.Return))
+        {
+            Debug.Log("ENTER PRESSED");
+            SceneManager.LoadScene("LEVELS");
+        }
     }
 }
