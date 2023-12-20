@@ -59,10 +59,10 @@ public class boss2 : MonoBehaviour
             UOrD = 0f;
             if (LOrR == 0)
             {
-                shiftLR = -2f;
+                shiftLR = -2.5f;
             } else if (LOrR == 1)
             {
-                shiftLR = 2f;
+                shiftLR = 2.5f;
             }
         } else if (LROrUD == 1)
         {
@@ -70,11 +70,11 @@ public class boss2 : MonoBehaviour
             LOrR = 0f;
             if (UOrD == 0)
             {
-                shiftUD = -2f;
+                shiftUD = -2.5f;
             }
             else if (UOrD == 1)
             {
-                shiftUD = 2f;
+                shiftUD = 2.5f;
             }
         }
         transform.position = new Vector3((teleportBehindPlayer.position.x + shiftLR), (teleportBehindPlayer.position.y + shiftUD), 0f);
