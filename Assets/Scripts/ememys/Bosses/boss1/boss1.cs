@@ -12,7 +12,7 @@ public class boss1 : MonoBehaviour
 
     public static float SQHP, SQMaxHP = 50f;
 
-    private float fireSpeed = 10;
+    private float fireSpeed = 8;
     private float canFire = 0.1f;
     private float canFireSnipe = 4f;
     private float timer;
