@@ -188,5 +188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  zombieGruntSpawnPoint: {fileID: 0}
   gruntXPosition: 8.6
   gruntYPosition: 4.7

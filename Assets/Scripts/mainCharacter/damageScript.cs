@@ -79,5 +79,11 @@ public class damageScript : MonoBehaviour
             boss2Component.DamageDealt(1);
             Destroy(transform.gameObject);
         }
+
+        if (collision.gameObject.TryGetComponent<boss3>(out boss3 boss3Component))
+        {
+            boss3Component.DamageDealt(1);
+            Destroy(transform.gameObject);
+        }
     }
 }

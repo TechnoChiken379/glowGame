@@ -10,9 +10,9 @@ public class boss3 : MonoBehaviour
 
     [SerializeField] public characterCube characterCube;
 
-    public static float TGHP, TGMaxHP = 100f;
+    public static float TGHP, TGMaxHP = 50f;
 
-    private float canFire = 1f;
+    private float canFire = 1.25f;
     private float timer;
 
     public GameObject zombieGrunt;
@@ -38,7 +38,14 @@ public class boss3 : MonoBehaviour
         if (timer >= canFire)
         {
             GruntSpawn();
-
+            if (TGHP <= 25)
+            {
+                GruntSpawn();
+            }
+            if (TGHP <= 10)
+            {
+                GruntSpawn();
+            }
             timer = 0f;
         }
     }
