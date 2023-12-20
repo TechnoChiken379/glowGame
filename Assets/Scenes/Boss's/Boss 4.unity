@@ -225,11 +225,11 @@ PrefabInstance:
       objectReference: {fileID: 1685592772}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.91
+      value: 3.92
       objectReference: {fileID: 0}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.z
@@ -265,7 +265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187379920163626529, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_Name
-      value: Celestial Guardian (1)
+      value: Celestial Guardian
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5718,6 +5718,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1988732178 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8065109417338894182, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
+  m_PrefabInstance: {fileID: 2025078789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025078789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5734,13 +5739,17 @@ PrefabInstance:
       propertyPath: snipeBullet
       value: 
       objectReference: {fileID: 1685592772}
+    - target: {fileID: 1199238313705400367, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
+      propertyPath: bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 1988732178}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.08
+      value: -4.41
       objectReference: {fileID: 0}
     - target: {fileID: 6915522150928694233, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5776,7 +5785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7187379920163626529, guid: 2fd245ea9d9c10c48bf9e5c0915c0c93, type: 3}
       propertyPath: m_Name
-      value: Celestial Guardian (2)
+      value: Celestial Guardian
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class boss4 : MonoBehaviour
 {
     private Transform player;
+    private Transform enemy;
 
     [SerializeField] public characterCube characterCube;
 
@@ -18,6 +19,9 @@ public class boss4 : MonoBehaviour
     private float timerSnipe;
     private float canFireSnipe = 3f;
     private float speed = 3f;
+
+    private float range = 5f;
+    private float enemyRange = 3f;
 
     public GameObject bullet;
     public GameObject snipeBullet;
@@ -35,24 +39,16 @@ public class boss4 : MonoBehaviour
         CGHP = CGMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+        enemy = GameObject.FindGameObjectWithTag("Celestial Guardian").transform;
     }
     public void Move()
     {
-        // Generate a random destination within the specified boundaries
-        Vector2 randomDestination = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
-
-        // Calculate the movement direction
-        Vector2 movementDirection = (randomDestination - (Vector2)transform.position).normalized;
-
-        // Calculate the new position based on time, speed, and direction
-        Vector2 newPosition = (Vector2)transform.position + movementDirection * Time.deltaTime * speed;
-
-        // Clamp the new position within the defined border
-        float clampedX = Mathf.Clamp(newPosition.x, minX, maxX);
-        float clampedY = Mathf.Clamp(newPosition.y, minY, maxY);
-
-        // Set the new position
-        transform.position = new Vector3(clampedX, clampedY, transform.position.z);
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        float distanceToEnemy = Vector2.Distance(transform.position, enemy.position);
+        if (distanceToPlayer >= range || distanceToEnemy >= enemyRange)
+        {
+            transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
+        }
     }
 
     // Update is called once per frame

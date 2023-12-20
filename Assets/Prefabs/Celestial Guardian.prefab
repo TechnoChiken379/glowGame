@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 1199238313705400367}
   m_Layer: 0
   m_Name: Celestial Guardian
-  m_TagString: Untagged
+  m_TagString: Celestial Guardian
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,10 @@ MonoBehaviour:
   bullet: {fileID: 0}
   snipeBullet: {fileID: 0}
   bulletSpawnPoint: {fileID: 8065109417338894182}
+  minX: -5
+  maxX: 5
+  minY: -5
+  maxY: 5
 --- !u!1 &1618582779841611912
 GameObject:
   m_ObjectHideFlags: 0

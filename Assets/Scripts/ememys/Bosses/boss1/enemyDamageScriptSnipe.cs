@@ -26,7 +26,6 @@ public class enemyDamageScriptSnipe : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             Destroy(transform.gameObject);
-            Debug.Log("Obstacle detected!");
             characterCube.HP -= 20;
         }
         //    if (grunt.gruntHP == 0)
