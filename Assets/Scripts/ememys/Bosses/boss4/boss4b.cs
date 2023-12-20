@@ -4,10 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class boss4 : MonoBehaviour
+public class boss4b : MonoBehaviour
 {
     private Transform player;
-    private Transform enemy;
+    private GameObject enemy1;
 
     [SerializeField] public characterCube characterCube;
 
@@ -39,16 +39,16 @@ public class boss4 : MonoBehaviour
         CGHP = CGMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
-        enemy = GameObject.FindGameObjectWithTag("Celestial Guardian").transform;
+        enemy1 = GameObject.FindGameObjectWithTag("Celestial Guardian");
     }
     public void Move()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        float distanceToEnemy = Vector2.Distance(transform.position, enemy.position);
-        if (distanceToPlayer >= range || distanceToEnemy >= enemyRange)
-        {
+        //float distanceToEnemy = Vector2.Distance(transform.position, enemy.position);
+        //if (distanceToPlayer >= range || distanceToEnemy >= enemyRange)
+        //{
             transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
-        }
+        //}
     }
 
     // Update is called once per frame
