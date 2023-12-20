@@ -5,6 +5,8 @@ using UnityEngine;
 public class enemyHealthBar4 : MonoBehaviour
 {
     public float xScale;
+    private float totalCGHP;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,8 @@ public class enemyHealthBar4 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        totalCGHP = boss4a.CGHP + boss4b.CGHP + boss4c.CGHP;
         transform.localScale = new Vector3(xScale, 9f, 1f);
-        xScale = 0.712f * boss3.TGHP;
+        xScale = 0.475f * totalCGHP;
     }
 }

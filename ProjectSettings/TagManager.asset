@@ -7,7 +7,6 @@ TagManager:
   - Obstacle
   - enemy
   - mainCharacter
-  - Celestial Guardian
   layers:
   - Default
   - TransparentFX

@@ -92,9 +92,21 @@ public class damageScript : MonoBehaviour
             Destroy(transform.gameObject);
         }
 
-        if (collision.gameObject.TryGetComponent<boss4>(out boss4 boss4Component))
+        if (collision.gameObject.TryGetComponent<boss4a>(out boss4a boss4aComponent))
         {
-            boss4Component.DamageDealt(damageAmount);
+            boss4aComponent.DamageDealt(damageAmount);
+            Destroy(transform.gameObject);
+        }
+
+        if (collision.gameObject.TryGetComponent<boss4b>(out boss4b boss4bComponent))
+        {
+            boss4bComponent.DamageDealt(damageAmount);
+            Destroy(transform.gameObject);
+        }
+
+        if (collision.gameObject.TryGetComponent<boss4c>(out boss4c boss4cComponent))
+        {
+            boss4cComponent.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
 
