@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class boss2 : MonoBehaviour
 {
     private Transform player;
-    private Transform teleportBehindPlayer;
 
     [SerializeField] public characterCube characterCube;
 
@@ -29,7 +28,6 @@ public class boss2 : MonoBehaviour
         IBHP = IBMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
-        teleportBehindPlayer = GameObject.Find("Pistol").transform;
     }
 
     // Update is called once per frame
@@ -37,8 +35,10 @@ public class boss2 : MonoBehaviour
     {
         timer += Time.deltaTime;
         Move();
-        if (timer >= canTeleport) 
+        if (timer >= canTeleport)
         {
+            shiftLR = 0;
+            shiftUD = 0;
             Teleport();
             timer = 0;
         }
@@ -53,18 +53,20 @@ public class boss2 : MonoBehaviour
     public void Teleport()
     {
         LROrUD = Random.Range(0, 2);
-        if (LROrUD == 0) 
+        if (LROrUD == 0)
         {
             LOrR = Random.Range(0, 2);
             UOrD = 0f;
             if (LOrR == 0)
             {
                 shiftLR = -2.5f;
-            } else if (LOrR == 1)
+            }
+            else if (LOrR == 1)
             {
                 shiftLR = 2.5f;
             }
-        } else if (LROrUD == 1)
+        }
+        if (LROrUD == 1)
         {
             UOrD = Random.Range(0, 2);
             LOrR = 0f;
@@ -77,7 +79,7 @@ public class boss2 : MonoBehaviour
                 shiftUD = 2.5f;
             }
         }
-        transform.position = new Vector3((teleportBehindPlayer.position.x + shiftLR), (teleportBehindPlayer.position.y + shiftUD), 0f);
+        transform.position = new Vector3((player.position.x + shiftLR), (player.position.y + shiftUD), 0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
