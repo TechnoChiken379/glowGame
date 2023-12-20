@@ -12,7 +12,7 @@ public class boss3 : MonoBehaviour
 
     public static float TGHP, TGMaxHP = 100f;
 
-    private float canFire = 0.5f;
+    private float canFire = 1f;
     private float timer;
 
     public GameObject zombieGrunt;

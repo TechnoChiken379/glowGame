@@ -6,7 +6,7 @@ using UnityEngine;
 public class boss3Movement : MonoBehaviour
 {
     public float speed = 4f;
-    private float minMax = 7;
+    private float minMax = 3.5f;
     private float yPosition;
 
     // Start is called before the first frame update
@@ -23,16 +23,13 @@ public class boss3Movement : MonoBehaviour
 
     public void Moving()
     {
-        transform.position = new Vector3(7.5f, yPosition, 0);
-        yPosition = transform.position.y * speed * Time.deltaTime;
+        yPosition = transform.position.y + speed * Time.deltaTime;
 
-        if (transform.position.y <= -minMax)
+        if (yPosition > minMax || yPosition < -minMax)
         {
-            yPosition *= -1;
+            speed *= -1;
         }
-        if (transform.position.y >= minMax)
-        {
-            yPosition *= -1;
-        }
+
+        transform.position = new Vector3(7.5f, yPosition, 0);
     }
 }
