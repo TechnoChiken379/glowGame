@@ -7577,6 +7577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Character
       objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2723805555476544301, guid: 9faf4627ecbba07419f6b919cd0f5475, type: 3}
     - target: {fileID: 7040729827169880814, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_Layer
       value: 7
