@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Boss's/Boss 5.unity
     guid: 0d1f9a8080ab9c74fa2e430938b6eb07
+  - enabled: 1
+    path: Assets/Scenes/MainMenuTree/winScreen.unity
+    guid: 7bf5f4ce847130f4495e98fcb75a5ee8
   m_configObjects: {}

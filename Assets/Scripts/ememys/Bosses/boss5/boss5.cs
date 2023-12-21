@@ -13,7 +13,8 @@ public class boss5 : MonoBehaviour
     public static float MSHP, MSMaxHP = 60f;
 
     private float speed = 4f;
-    private float closeEnough = 2.5f;
+    private float closeEnough = 2f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -36,13 +37,17 @@ public class boss5 : MonoBehaviour
         {
             transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
         }
+        if (distanceToPlayer <= closeEnough)
+        {
+
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 20;
+            characterCube.HP -= 10;
         }
     }
     public void DamageDealt(float damageAmount)
