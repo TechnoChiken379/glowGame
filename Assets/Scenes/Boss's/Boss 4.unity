@@ -8353,7 +8353,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.923652, y: 3.6680121, z: 4.3258}
-  m_LocalScale: {x: 0.16, y: 0.16, z: 0.17999999}
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 356886585}
@@ -8405,7 +8405,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -9356,9 +9356,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterCube: {fileID: 0}
-  bullet: {fileID: 0}
-  snipeBullet: {fileID: 0}
-  bulletSpawnPoint: {fileID: 0}
+  bullet: {fileID: 1522147716}
+  bulletSpawnPoint: {fileID: 1193630475}
   xPosition: 0
   yPosition: 0
 --- !u!1 &1677143580
@@ -9409,7 +9408,7 @@ GameObject:
   - component: {fileID: 1685592776}
   - component: {fileID: 1685592775}
   - component: {fileID: 1685592774}
-  - component: {fileID: 1685592773}
+  - component: {fileID: 1685592778}
   m_Layer: 9
   m_Name: enemySnipeBullet
   m_TagString: Untagged
@@ -9417,18 +9416,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1685592773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1685592772}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb8705ae368e15841ae077b50a3cdcf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1685592774
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9558,6 +9545,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 356886585}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1685592778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685592772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27f8c3303e41542469eb7e1e008662b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1688626707
 GameObject:
   m_ObjectHideFlags: 0

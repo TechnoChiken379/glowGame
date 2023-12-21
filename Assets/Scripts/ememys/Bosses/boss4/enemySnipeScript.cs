@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyShotgunDamageScript : MonoBehaviour
+public class enemySnipeScript : MonoBehaviour
 {
     private grunt gruntHealth;
     private GameObject enemy;
@@ -24,8 +24,7 @@ public class enemyShotgunDamageScript : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             Destroy(transform.gameObject);
-            Debug.Log("Obstacle detected!");
-            characterCube.HP -= 4;
+            characterCube.HP -= 10;
         }
         //    if (grunt.gruntHP == 0)
         //    {
@@ -36,4 +35,3 @@ public class enemyShotgunDamageScript : MonoBehaviour
 
 
 }
-
