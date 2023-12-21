@@ -13,7 +13,7 @@ public class boss4c : MonoBehaviour
 
     public static float CGHP, CGMaxHP = 25f;
 
-    private float fireSpeed = 8;
+    private float fireSpeed = 12;
     private float canFire = 2f;
     private float timerShotgun;
     private float speed = 2.5f;
@@ -42,7 +42,7 @@ public class boss4c : MonoBehaviour
     void Start()
     {
         CGHP = CGMaxHP;
-        moveTimer = 10;
+        moveTimer = 15;
         timerShotgun = 1f;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
@@ -80,7 +80,7 @@ public class boss4c : MonoBehaviour
                 GameObject spawnedPellet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
                 spawnedPellet.GetComponent<Rigidbody2D>().velocity = spreadDirection * fireSpeed;
 
-                Destroy(spawnedPellet, 1f);
+                Destroy(spawnedPellet, 0.5f);
             }
 
             timerShotgun = 0f;
