@@ -13,16 +13,13 @@ public class boss4c : MonoBehaviour
 
     public static float CGHP, CGMaxHP = 25f;
 
-    //private float fireSpeed = 10;
-    //private float canFire = 0.5f;
-    //private float timer;
-    //private float timerSnipe;
-    //private float canFireSnipe = 3f;
+    private float fireSpeed = 8;
+    private float canFire = 2f;
+    private float timerShotgun;
     private float speed = 2.5f;
 
 
     public GameObject bullet;
-    public GameObject snipeBullet;
 
     public Transform bulletSpawnPoint;
 
@@ -38,12 +35,15 @@ public class boss4c : MonoBehaviour
     private float chooseNewPosition = 2f;
     private float moveTimer;
 
+    float numberOfPellets = 5f;
+    float spreadAngle = 30f;
 
     // Start is called before the first frame update
     void Start()
     {
         CGHP = CGMaxHP;
         moveTimer = 10;
+        timerShotgun = 1f;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
     public void Move()
@@ -60,45 +60,34 @@ public class boss4c : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //timer += Time.deltaTime;
-        //timerSnipe += Time.deltaTime;
+        timerShotgun += Time.deltaTime;
         moveTimer += Time.deltaTime;
 
         Move();
-        //FireBullet();
-        //FireSnipeBullet();
+        FireShotgunBullet();
     }
-    //public void FireBullet()
-    //{
-    //    if (timer >= canFire)
-    //    {
-    //        GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+    public void FireShotgunBullet()
+    {
+        if (timerShotgun >= canFire)
+        {
+            for (int i = 0; i < numberOfPellets; i++)
+            {
+                Quaternion randomRotation = Quaternion.Euler(0, 0, Random.Range(-spreadAngle / 2f, spreadAngle / 2f));
 
-    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-    //        spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
+                Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+                Vector3 spreadDirection = randomRotation * directionToPlayer;
 
-    //        Destroy(spawnedBullet, 2);
-    //        timer = 0f;
-    //    }
+                GameObject spawnedPellet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+                spawnedPellet.GetComponent<Rigidbody2D>().velocity = spreadDirection * fireSpeed;
 
-    //}
+                Destroy(spawnedPellet, 1f);
+            }
 
-    //public void FireSnipeBullet()
-    //{
-    //    if (timerSnipe >= canFireSnipe)
-    //    {
-    //        GameObject spawnedSnipeBullet = Instantiate(snipeBullet, bulletSpawnPoint.position, Quaternion.identity);
+            timerShotgun = 0f;
+        }
+    }
 
-    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-    //        spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * (fireSpeed * 1.5f);
-
-    //        Destroy(spawnedSnipeBullet, 2);
-    //        timerSnipe = 0f;
-    //    }
-
-    //}
-
-    private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
