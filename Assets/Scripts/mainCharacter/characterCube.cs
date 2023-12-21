@@ -40,6 +40,7 @@ public class characterCube : MonoBehaviour
         if (HP < 1)
         {
             SceneManager.LoadScene("deathScreen");
+            HP = backUpHP;
         }
         if (Input.GetKey(KeyCode.Escape))
         {
