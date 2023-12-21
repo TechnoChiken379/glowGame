@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boss5FireBallAttack : MonoBehaviour
+public class boss5IceBlastAttack : MonoBehaviour
 {
-    private float timer;
-    private float canFire = 3;
-    private float fireSpeed = 10;
-
-    public GameObject FireBall;
-    public Transform fireBallSpawnPoint;
-
     private Transform player;
 
+    private float timer;
+    private float canFire = 2;
+    private float fireSpeed = 20;
+
+    public GameObject iceBlast;
+    public Transform iceBlastSpawnPoint;
+
     private float closeEnough = 2.5f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,21 +29,22 @@ public class boss5FireBallAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer >= closeEnough)
+        if (distanceToPlayer <= closeEnough)
         {
-            FireSnipeBullet();
+           FireIceBlast();
         }
+
     }
-    public void FireSnipeBullet()
+    public void FireIceBlast()
     {
         if (timer >= canFire)
-        {
-            GameObject spawnedSnipeBullet = Instantiate(FireBall, fireBallSpawnPoint.position, Quaternion.identity);
+        { 
+            GameObject spawnedSnipeBullet = Instantiate(iceBlast, iceBlastSpawnPoint.position, Quaternion.identity);
 
-            Vector3 directionToPlayer = (player.position - fireBallSpawnPoint.position).normalized;
+            Vector3 directionToPlayer = (player.position - iceBlastSpawnPoint.position).normalized;
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
-            Destroy(spawnedSnipeBullet, 2);
+            Destroy(spawnedSnipeBullet, 0.2f);
             timer = 0f;
         }
 
