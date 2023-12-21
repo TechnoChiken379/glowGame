@@ -44,9 +44,11 @@ public class characterCube : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             SceneManager.LoadScene("LEVELS");
+            HP = backUpHP;
         }
         if (Input.GetKey(KeyCode.Return))
         {
+            HP = backUpHP;
             if (bossBuildIndex == 0) SceneManager.LoadScene("Boss 1");
             if (bossBuildIndex == 1) SceneManager.LoadScene("Boss 2");
             if (bossBuildIndex == 2) SceneManager.LoadScene("Boss 3");
