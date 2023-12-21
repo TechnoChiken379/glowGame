@@ -18,6 +18,8 @@ public class characterCube : MonoBehaviour
     public GameObject pistol;
     public GameObject shotGun;
     public GameObject sniper;
+
+    public string bossSelect;
     
     // Start is called before the first frame update
     void Start()
@@ -50,7 +52,7 @@ public class characterCube : MonoBehaviour
         if (Input.GetKey(KeyCode.Return))
         {
             HP = backUpHP;
-            if (bossBuildIndex == 0) SceneManager.LoadScene("Boss 1");
+            if (bossSelect == "Boss 1") SceneManager.LoadScene("Boss 1");
             if (bossBuildIndex == 1) SceneManager.LoadScene("Boss 2");
             if (bossBuildIndex == 2) SceneManager.LoadScene("Boss 3");
             if (bossBuildIndex == 3) SceneManager.LoadScene("Boss 4");
