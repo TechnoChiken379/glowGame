@@ -3722,11 +3722,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a1b0231016f504483d19376b36d07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 608240203}
+  characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 233282267}
+  bullet: {fileID: 608240203}
   fireSpeed: 12
   timer: 0
   canFire: 0.25
+  sniperBullet: {fileID: 0}
+  sniperFireSpeed: 12
+  sniperTimer: 0
+  sniperCanFire: 0.25
+  shotGunBullet: {fileID: 0}
+  shotGunFireSpeed: 12
+  shotGunTimer: 0
+  shotGunCanFire: 0.25
 --- !u!114 &1061923422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4390,6 +4399,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c5570d6857dda409c6bd8dfbbb846a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pistol: {fileID: 0}
+  shotGun: {fileID: 0}
+  sniper: {fileID: 0}
 --- !u!50 &1279092400
 Rigidbody2D:
   serializedVersion: 4
