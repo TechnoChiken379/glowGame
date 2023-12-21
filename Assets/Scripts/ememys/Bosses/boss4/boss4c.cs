@@ -106,6 +106,10 @@ public class boss4c : MonoBehaviour
             yPosition = Random.Range(yMin, yMax);
             moveTimer = 0;
         }
+        if (collision.gameObject.CompareTag("mainCharacter"))
+        {
+            characterCube.HP -= 10;
+        }
     }
 
     public void DamageDealt(float damageAmount)
