@@ -25,6 +25,7 @@ public class enemyHealthBar4 : MonoBehaviour
         {
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
+            characterCube.bossBuildIndex = 4;
             SceneManager.LoadScene("winScreen");
         }
 
