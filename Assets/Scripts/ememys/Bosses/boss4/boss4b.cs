@@ -14,15 +14,12 @@ public class boss4b : MonoBehaviour
     public static float CGHP, CGMaxHP = 25f;
 
     private float fireSpeed = 8;
-    private float canFire = 0.3f;
+    private float canFire = 0.35f;
     private float timer;
-    //private float timerSnipe;
-    //private float canFireSnipe = 3f;
     private float speed = 2.5f;
 
 
     public GameObject bullet;
-    //public GameObject snipeBullet;
 
     public Transform bulletSpawnPoint;
 
@@ -61,12 +58,10 @@ public class boss4b : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        //timerSnipe += Time.deltaTime;
         moveTimer += Time.deltaTime;
 
         Move();
         FireBullet();
-        //FireSnipeBullet();
     }
     public void FireBullet()
     {
@@ -83,21 +78,6 @@ public class boss4b : MonoBehaviour
 
     }
 
-    //public void FireSnipeBullet()
-    //{
-    //    if (timerSnipe >= canFireSnipe)
-    //    {
-    //        GameObject spawnedSnipeBullet = Instantiate(snipeBullet, bulletSpawnPoint.position, Quaternion.identity);
-
-    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-    //        spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * (fireSpeed * 1.5f);
-
-    //        Destroy(spawnedSnipeBullet, 2);
-    //        timerSnipe = 0f;
-    //    }
-
-    //}
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Obstacle"))
@@ -105,6 +85,10 @@ public class boss4b : MonoBehaviour
             xPosition = Random.Range(xMin, xMax);
             yPosition = Random.Range(yMin, yMax);
             moveTimer = 0;
+        }
+        if (collision.gameObject.CompareTag("mainCharacter"))
+        {
+            characterCube.HP -= 10;
         }
     }
 
