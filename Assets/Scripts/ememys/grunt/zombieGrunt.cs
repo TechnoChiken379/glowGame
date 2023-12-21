@@ -43,7 +43,6 @@ public class zombieGrunt : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             Destroy(transform.gameObject);
-            Debug.Log("Obstacle detected!");
             characterCube.HP -= 7;
         }
         //    if (grunt.gruntHP == 0)

@@ -23,11 +23,9 @@ public class characterCube : MonoBehaviour
         if (HP < 1)
         {
             SceneManager.LoadScene("deathScreen");
-            Debug.Log("player died!");
         }
         if (Input.GetKey(KeyCode.Return))
         {
-            Debug.Log("ENTER PRESSED");
             SceneManager.LoadScene("LEVELS");
         }
     }

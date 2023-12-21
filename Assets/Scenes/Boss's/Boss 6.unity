@@ -4815,8 +4815,6 @@ GameObject:
   - component: {fileID: 1675120415}
   - component: {fileID: 1675120418}
   - component: {fileID: 1675120417}
-  - component: {fileID: 1675120416}
-  - component: {fileID: 1675120419}
   m_Layer: 0
   m_Name: LA RICARDO
   m_TagString: Untagged
@@ -4840,19 +4838,6 @@ Transform:
   - {fileID: 2004677726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1675120416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675120414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0f17565ab836d64d858c251bd9f4efb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  characterCube: {fileID: 0}
 --- !u!61 &1675120417
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4925,20 +4910,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &1675120419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675120414}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 222fc3cc06695e9419e82f7de344d433, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FireBall: {fileID: 0}
-  fireBallSpawnPoint: {fileID: 0}
 --- !u!1 &1686117950
 GameObject:
   m_ObjectHideFlags: 0
