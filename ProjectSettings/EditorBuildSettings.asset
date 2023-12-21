@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenuTree/LEVELS.unity
     guid: ed174b2073321594caee7df19977d8c6
   - enabled: 1
-    path: Assets/Scenes/MainMenuTree/deathScreen.unity
-    guid: 99463dacc5d5d144994cdc3c38f83ccf
-  - enabled: 1
     path: Assets/Scenes/Boss's/Boss 1.unity
     guid: d4d9b5b7c870ab448917b064be746439
   - enabled: 1
@@ -38,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenuTree/winScreen.unity
     guid: 7bf5f4ce847130f4495e98fcb75a5ee8
+  - enabled: 1
+    path: Assets/Scenes/MainMenuTree/deathScreen.unity
+    guid: 99463dacc5d5d144994cdc3c38f83ccf
   m_configObjects: {}

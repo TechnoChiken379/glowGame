@@ -10,33 +10,29 @@ public class FireBulletOnActivate : MonoBehaviour
     public Transform bulletSpawnPoint;
 
     public GameObject bullet;
-    public float fireSpeed = 12;
-    public float timer = 0f;
-    public float canFire = 0.25f;
+    private float fireSpeed = 12;
+    private float timer;
+    private float canFire = 0.5f;
 
-    public GameObject sniperBullet;
-    public float sniperFireSpeed = 12;
-    public float sniperTimer = 0f;
-    public float sniperCanFire = 0.25f;
+    private float sniperFireSpeed = 70;
+    private float sniperTimer;
+    private float sniperCanFire = 2f;
 
-    public GameObject shotGunBullet;
-    public float shotGunFireSpeed = 12;
-    public float shotGunTimer = 0f;
-    public float shotGunCanFire = 0.25f;
+    private float shotGunFireSpeed = 70;
+    private float shotGunTimer;
+    private float shotGunCanFire = 1f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-   
-    }
+    private float palletAmount = 7;
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
+        sniperTimer += Time.deltaTime;
+        shotGunTimer += Time.deltaTime;
+
         if (characterCube.hotKey1 == true)
         {
-            FirePistol();
+            Fire();
         }
         if (characterCube.hotKey2 == true)
         {
@@ -44,11 +40,11 @@ public class FireBulletOnActivate : MonoBehaviour
         }
         if (characterCube.hotKey3 == true)
         {
-            FireSniper();
+            SniperFire();
         }
     }
 
-    public void FirePistol()
+    public void Fire()
     {
         if (Input.GetMouseButton(0) && timer >= canFire)
         {
@@ -60,24 +56,33 @@ public class FireBulletOnActivate : MonoBehaviour
         }
     }
 
-    public void FireShotGun()
+    public void SniperFire()
     {
         if (Input.GetMouseButton(0) && timer >= canFire)
         {
-            GameObject spawnedBullet = Instantiate(shotGunBullet, bulletSpawnPoint.position, Quaternion.identity);
+            GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
             spawnedBullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * fireSpeed;
-            Destroy(spawnedBullet, 2);
+            Destroy(spawnedBullet, 0.5f);
+
             timer = 0f;
         }
     }
 
-    public void FireSniper()
+    public void FireShotGun()
     {
         if (Input.GetMouseButton(0) && timer >= canFire)
         {
-            GameObject spawnedBullet = Instantiate(sniperBullet, bulletSpawnPoint.position, Quaternion.identity);
-            spawnedBullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * fireSpeed;
-            Destroy(spawnedBullet, 2);
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 baseDirection = (mousePosition - bulletSpawnPoint.position).normalized;
+            for (int i = 0; i < palletAmount; i++)
+            {
+                float randomAngle = Random.Range(-20f, 20f);
+                Vector2 fireDirection = Quaternion.Euler(0, 0, randomAngle) * baseDirection;
+                GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+                spawnedBullet.transform.right = fireDirection;
+                spawnedBullet.GetComponent<Rigidbody2D>().velocity = fireDirection * fireSpeed;
+                Destroy(spawnedBullet, 0.17f);
+            }
             timer = 0f;
         }
     }
