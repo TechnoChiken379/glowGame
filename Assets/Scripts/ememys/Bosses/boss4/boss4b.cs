@@ -13,16 +13,16 @@ public class boss4b : MonoBehaviour
 
     public static float CGHP, CGMaxHP = 25f;
 
-    //private float fireSpeed = 10;
-    //private float canFire = 0.5f;
-    //private float timer;
+    private float fireSpeed = 8;
+    private float canFire = 0.3f;
+    private float timer;
     //private float timerSnipe;
     //private float canFireSnipe = 3f;
     private float speed = 2.5f;
 
 
     public GameObject bullet;
-    public GameObject snipeBullet;
+    //public GameObject snipeBullet;
 
     public Transform bulletSpawnPoint;
 
@@ -60,28 +60,28 @@ public class boss4b : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //timer += Time.deltaTime;
+        timer += Time.deltaTime;
         //timerSnipe += Time.deltaTime;
         moveTimer += Time.deltaTime;
 
         Move();
-        //FireBullet();
+        FireBullet();
         //FireSnipeBullet();
     }
-    //public void FireBullet()
-    //{
-    //    if (timer >= canFire)
-    //    {
-    //        GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+    public void FireBullet()
+    {
+        if (timer >= canFire)
+        {
+            GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
 
-    //        Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
-    //        spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
+            Vector3 directionToPlayer = (player.position - bulletSpawnPoint.position).normalized;
+            spawnedBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
-    //        Destroy(spawnedBullet, 2);
-    //        timer = 0f;
-    //    }
+            Destroy(spawnedBullet, 2);
+            timer = 0f;
+        }
 
-    //}
+    }
 
     //public void FireSnipeBullet()
     //{
