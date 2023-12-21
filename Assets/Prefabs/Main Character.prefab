@@ -4440,7 +4440,7 @@ MonoBehaviour:
   sniperFireSpeed: 12
   sniperTimer: 0
   sniperCanFire: 0.25
-  shotGunBullet: {fileID: 2274676627854591876, guid: de0083fbe0e80274ca04d8b8bfa0b014, type: 3}
+  shotGunBullet: {fileID: 2275980012909659430, guid: 992910c37a8264346b9f83f0e21bd904, type: 3}
   shotGunFireSpeed: 12
   shotGunTimer: 0
   shotGunCanFire: 0.25
@@ -6965,7 +6965,7 @@ MonoBehaviour:
   sniperFireSpeed: 12
   sniperTimer: 0
   sniperCanFire: 0.25
-  shotGunBullet: {fileID: 2274676627854591876, guid: de0083fbe0e80274ca04d8b8bfa0b014, type: 3}
+  shotGunBullet: {fileID: 2275980012909659430, guid: 992910c37a8264346b9f83f0e21bd904, type: 3}
   shotGunFireSpeed: 12
   shotGunTimer: 0
   shotGunCanFire: 0.25
@@ -7337,7 +7337,7 @@ MonoBehaviour:
   sniperFireSpeed: 12
   sniperTimer: 0
   sniperCanFire: 0.25
-  shotGunBullet: {fileID: 2274676627854591876, guid: de0083fbe0e80274ca04d8b8bfa0b014, type: 3}
+  shotGunBullet: {fileID: 2275980012909659430, guid: 992910c37a8264346b9f83f0e21bd904, type: 3}
   shotGunFireSpeed: 0
   shotGunTimer: 0
   shotGunCanFire: 0.25
