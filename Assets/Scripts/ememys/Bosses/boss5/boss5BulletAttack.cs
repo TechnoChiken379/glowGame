@@ -7,7 +7,7 @@ public class boss5BulletAttack : MonoBehaviour
     private Transform player;
 
     private float timer;
-    private float canFire = 1f;
+    private float canFire = 2f;
     private float fireSpeed = 8;
 
     public GameObject EnemyBullet;
