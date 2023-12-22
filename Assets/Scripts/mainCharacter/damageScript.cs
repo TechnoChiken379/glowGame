@@ -24,7 +24,7 @@ public class damageScript : MonoBehaviour
             damageAmount = 2f;
         } else if (characterCube.hotKey2)
         {
-            damageAmount = 0.7f;
+            damageAmount = 0.6f;
         } else if (characterCube.hotKey3)
         {
             damageAmount = 6f;
