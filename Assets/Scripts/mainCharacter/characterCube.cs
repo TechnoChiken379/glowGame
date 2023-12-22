@@ -16,7 +16,7 @@ public class characterCube : MonoBehaviour
     public GameObject shotGun;
     public GameObject sniper;
 
-    public static int bossBuildIndex = 0;
+    public static int bossBuildIndex = 8;
     public int bossBuildIndexCount;
 
     // Start is called before the first frame update
