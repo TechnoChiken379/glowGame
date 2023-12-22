@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class teleportation1 : MonoBehaviour
+public class teleportationScript : MonoBehaviour
 {
     GameObject bigSquare;
     GameObject bigSquare1;

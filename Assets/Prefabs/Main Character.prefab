@@ -4433,6 +4433,19 @@ MonoBehaviour:
   characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 889084930001130024}
   bullet: {fileID: 2723805555476544301, guid: fce674fe26e2d8e48bc4028fd1187deb, type: 3}
+  fireSpeed: 12
+  timer: 0
+  canFire: 0.5
+  bulletLifeTime: 1
+  sniperFireSpeed: 30
+  sniperTimer: 0
+  sniperCanFire: 1.5
+  sniperBulletLifeTime: 0.35
+  shotGunFireSpeed: 25
+  shotGunTimer: 0
+  shotGunCanFire: 1
+  shotGunBulletLifeTime: 0.175
+  palletAmount: 7
 --- !u!1 &4856839545505173699
 GameObject:
   m_ObjectHideFlags: 0
@@ -5833,6 +5846,7 @@ GameObject:
   - component: {fileID: 7587196278162232250}
   - component: {fileID: 1163968098719723957}
   - component: {fileID: 3386316618449043491}
+  - component: {fileID: 7730325697611970623}
   m_Layer: 7
   m_Name: MainCharacterCube
   m_TagString: mainCharacter
@@ -6009,6 +6023,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+--- !u!114 &7730325697611970623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591661741469147210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 631608c342840094eb61bdfd7db1e6d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canNotTelePort: {fileID: 2100000, guid: d996f950341fdb649a1bbfe56c99f7b6, type: 2}
+  canTeleportblue: {fileID: 2100000, guid: 3bb642e4d58752048b70468c2971937f, type: 2}
+  canTeleportYellow: {fileID: 2100000, guid: 61ff0a44b96d5334bb23214c2c5478ef, type: 2}
 --- !u!1 &5649198017205353146
 GameObject:
   m_ObjectHideFlags: 0
@@ -6948,6 +6977,19 @@ MonoBehaviour:
   characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 5898422984127488423}
   bullet: {fileID: 2723805555476544301, guid: 9faf4627ecbba07419f6b919cd0f5475, type: 3}
+  fireSpeed: 12
+  timer: 0
+  canFire: 0.5
+  bulletLifeTime: 1
+  sniperFireSpeed: 30
+  sniperTimer: 0
+  sniperCanFire: 1.5
+  sniperBulletLifeTime: 0.35
+  shotGunFireSpeed: 25
+  shotGunTimer: 0
+  shotGunCanFire: 1
+  shotGunBulletLifeTime: 0.175
+  palletAmount: 7
 --- !u!1 &6444145670760137542
 GameObject:
   m_ObjectHideFlags: 0
@@ -7309,6 +7351,19 @@ MonoBehaviour:
   characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 8236308315104851025}
   bullet: {fileID: 2723805555476544301, guid: eec6923d11c55f045870fdfbeae808b5, type: 3}
+  fireSpeed: 12
+  timer: 0
+  canFire: 0.5
+  bulletLifeTime: 1
+  sniperFireSpeed: 30
+  sniperTimer: 0
+  sniperCanFire: 1.5
+  sniperBulletLifeTime: 0.35
+  shotGunFireSpeed: 25
+  shotGunTimer: 0
+  shotGunCanFire: 1
+  shotGunBulletLifeTime: 0.175
+  palletAmount: 7
 --- !u!1 &7157394128358736516
 GameObject:
   m_ObjectHideFlags: 0

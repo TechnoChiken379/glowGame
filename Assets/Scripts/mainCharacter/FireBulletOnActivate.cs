@@ -18,10 +18,10 @@ public class FireBulletOnActivate : MonoBehaviour
     public float bulletLifeTime = 1f;
 
     //sniper
-    private float sniperFireSpeed = 30;
-    private float sniperTimer;
-    private float sniperCanFire = 1.5f;
-    private float sniperBulletLifeTime = 0.35f;
+    public float sniperFireSpeed = 30;
+    public float sniperTimer;
+    public float sniperCanFire = 1.5f;
+    public float sniperBulletLifeTime = 0.35f;
 
     //shotgun
     public float shotGunFireSpeed = 25;
