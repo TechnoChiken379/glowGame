@@ -1304,6 +1304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c5570d6857dda409c6bd8dfbbb846a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pistol: {fileID: 0}
+  shotGun: {fileID: 0}
+  sniper: {fileID: 0}
+  bossSelect: 
 --- !u!50 &335746959
 Rigidbody2D:
   serializedVersion: 4
@@ -1685,11 +1689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a1b0231016f504483d19376b36d07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 465486035}
+  characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 1160979822}
-  fireSpeed: 15
-  timer: 0
-  canFire: 0
+  bullet: {fileID: 465486035}
 --- !u!114 &420801889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2881,6 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
 --- !u!1 &915497668
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
 --- !u!1 &1458046467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5776,16 +5780,36 @@ PrefabInstance:
     m_TransformParent: {fileID: 1394346394}
     m_Modifications:
     - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1394346395}
     - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1394346390}
+    - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadScene
+      value: BossSceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: sceneLoader, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
