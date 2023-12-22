@@ -7,7 +7,19 @@ using UnityEngine;
 
 public class shoutDamageScript : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Update()
+    {
+        
+    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("mainCharacter"))
+    //    {
+    //        characterCube.HP -= 5f;
+    //        Destroy(transform.gameObject);
+    //    }
+    //}
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
