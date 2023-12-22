@@ -21,13 +21,13 @@ public class damageScript : MonoBehaviour
     {
         if (characterCube.hotKey1)
         {
-            damageAmount = 2.5f;
+            damageAmount = 2f;
         } else if (characterCube.hotKey2)
         {
-            damageAmount = 0.875f;
+            damageAmount = 0.7f;
         } else if (characterCube.hotKey3)
         {
-            damageAmount = 8.75f;
+            damageAmount = 7f;
         }
     }
 
