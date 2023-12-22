@@ -123,6 +123,174 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7636204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7636205}
+  - component: {fileID: 7636206}
+  m_Layer: 0
+  m_Name: rage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7636205
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636204}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2004677726}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &7636206
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636204}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 93ec95dc16106ab48b82397141d48251, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.32, y: 4.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &160817470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160817471}
+  - component: {fileID: 160817472}
+  m_Layer: 0
+  m_Name: normal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160817471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160817470}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2004677726}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &160817472
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160817470}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 7ddad0351fd3c3c46b4f94daba2c3a1a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 4.32, y: 4.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &188111034
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +398,7 @@ GameObject:
   - component: {fileID: 447510619}
   m_Layer: 8
   m_Name: border
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,7 +628,7 @@ GameObject:
   - component: {fileID: 535530349}
   m_Layer: 8
   m_Name: playerHBCover
-  m_TagString: Untagged
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -545,7 +713,7 @@ GameObject:
   - component: {fileID: 565303557}
   m_Layer: 8
   m_Name: bossHealthBarBackDrop
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -676,7 +844,7 @@ GameObject:
   - component: {fileID: 589723086}
   m_Layer: 8
   m_Name: bossHealthBar
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +970,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 589723082}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2333086c3af4e814db0cb2d3eb8d2509, type: 3}
+  m_Script: {fileID: 11500000, guid: 637a302b0d8f4164090dcc21d7f11f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   xScale: 0
@@ -885,7 +1053,7 @@ GameObject:
   - component: {fileID: 705767737}
   - component: {fileID: 705767736}
   - component: {fileID: 705767735}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bigSquare
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1138,7 +1306,7 @@ GameObject:
   - component: {fileID: 949725905}
   - component: {fileID: 949725907}
   - component: {fileID: 949725906}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smallSquare (3)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1266,7 +1434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 950373130}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: SquereObsticals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1475,7 @@ GameObject:
   - component: {fileID: 1023005685}
   m_Layer: 8
   m_Name: borders
-  m_TagString: Untagged
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1343,7 +1511,7 @@ GameObject:
   - component: {fileID: 1061358691}
   m_Layer: 8
   m_Name: border
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1471,7 +1639,7 @@ GameObject:
   - component: {fileID: 1061907717}
   - component: {fileID: 1061907719}
   - component: {fileID: 1061907718}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bigSquare (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1636,7 +1804,7 @@ GameObject:
   - component: {fileID: 1211212875}
   m_Layer: 8
   m_Name: playerHB
-  m_TagString: Untagged
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1715,7 +1883,7 @@ GameObject:
   - component: {fileID: 1325768413}
   - component: {fileID: 1325768415}
   - component: {fileID: 1325768414}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smallSquare (1)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -1845,7 +2013,7 @@ GameObject:
   - component: {fileID: 1344989293}
   - component: {fileID: 1344989295}
   - component: {fileID: 1344989294}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smallSquare (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2032,7 +2200,7 @@ GameObject:
   - component: {fileID: 1404783161}
   m_Layer: 8
   m_Name: bossHB
-  m_TagString: Untagged
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2066,7 +2234,7 @@ GameObject:
   - component: {fileID: 1524859299}
   - component: {fileID: 1524859301}
   - component: {fileID: 1524859300}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: bigSquare (2)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2196,7 +2364,7 @@ GameObject:
   - component: {fileID: 1526255607}
   - component: {fileID: 1526255609}
   - component: {fileID: 1526255608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smallSquare
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2359,6 +2527,7 @@ GameObject:
   - component: {fileID: 1675120415}
   - component: {fileID: 1675120418}
   - component: {fileID: 1675120417}
+  - component: {fileID: 1675120419}
   m_Layer: 0
   m_Name: LA RICARDO
   m_TagString: Untagged
@@ -2376,7 +2545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.27, y: 0.13, z: -0.07295643}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2004677726}
@@ -2414,7 +2583,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0.26}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2425,7 +2594,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.11, y: 1.42}
+  m_Size: {x: 2.2, y: 2.2}
   m_EdgeRadius: 0
 --- !u!50 &1675120418
 Rigidbody2D:
@@ -2449,11 +2618,26 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 3584
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1675120419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675120414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cce73db74f6f7645a9713c5ea0996ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
+  normal: {fileID: 160817470}
+  rage: {fileID: 7636204}
 --- !u!1 &1730178723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2467,7 +2651,7 @@ GameObject:
   - component: {fileID: 1730178725}
   m_Layer: 8
   m_Name: border
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2598,7 +2782,7 @@ GameObject:
   - component: {fileID: 1817637187}
   m_Layer: 8
   m_Name: playerHealthBar
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2740,7 +2924,7 @@ GameObject:
   - component: {fileID: 1831828830}
   m_Layer: 8
   m_Name: bossHBCover
-  m_TagString: Untagged
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2823,7 +3007,7 @@ GameObject:
   - component: {fileID: 1948003820}
   - component: {fileID: 1948003822}
   - component: {fileID: 1948003821}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: smallSquare (4)
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -2955,7 +3139,7 @@ GameObject:
   - component: {fileID: 1991436069}
   m_Layer: 8
   m_Name: playerHealthBarBackDrop
-  m_TagString: Obstacle
+  m_TagString: border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3100,7 +3284,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 160817471}
+  - {fileID: 7636205}
   m_Father: {fileID: 1675120415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4872527070572172325
