@@ -4387,7 +4387,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2202385221273864286
 Transform:
   m_ObjectHideFlags: 0
@@ -4440,11 +4440,11 @@ MonoBehaviour:
   sniperFireSpeed: 30
   sniperTimer: 0
   sniperCanFire: 1.5
-  sniperBulletLifeTime: 0.35
+  sniperBulletLifeTime: 0.5
   shotGunFireSpeed: 25
   shotGunTimer: 0
   shotGunCanFire: 1
-  shotGunBulletLifeTime: 0.175
+  shotGunBulletLifeTime: 0.2
   palletAmount: 7
 --- !u!1 &4856839545505173699
 GameObject:
@@ -6984,11 +6984,11 @@ MonoBehaviour:
   sniperFireSpeed: 30
   sniperTimer: 0
   sniperCanFire: 1.5
-  sniperBulletLifeTime: 0.35
+  sniperBulletLifeTime: 0.5
   shotGunFireSpeed: 25
   shotGunTimer: 0
   shotGunCanFire: 1
-  shotGunBulletLifeTime: 0.175
+  shotGunBulletLifeTime: 0.2
   palletAmount: 7
 --- !u!1 &6444145670760137542
 GameObject:
@@ -7305,7 +7305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4688852371769533688
 Transform:
   m_ObjectHideFlags: 0
@@ -7358,11 +7358,11 @@ MonoBehaviour:
   sniperFireSpeed: 30
   sniperTimer: 0
   sniperCanFire: 1.5
-  sniperBulletLifeTime: 0.35
+  sniperBulletLifeTime: 0.5
   shotGunFireSpeed: 25
   shotGunTimer: 0
   shotGunCanFire: 1
-  shotGunBulletLifeTime: 0.175
+  shotGunBulletLifeTime: 0.2
   palletAmount: 7
 --- !u!1 &7157394128358736516
 GameObject:

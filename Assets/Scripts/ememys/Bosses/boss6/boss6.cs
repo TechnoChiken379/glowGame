@@ -14,7 +14,7 @@ public class boss6 : MonoBehaviour
 
     public static float RicardoHP, RicardoMaxHP = 100f;
 
-    private float speed = 8f;
+    private float speed = 6f;
 
     public GameObject normal;
     public GameObject rage;
