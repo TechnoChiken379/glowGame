@@ -41,6 +41,10 @@ public class boss6ShoutAttack : MonoBehaviour
         {
             shout2Timer += Time.deltaTime;
         }
+        if (shout2Timer >= 2)
+        {
+            shout1Timer += Time.deltaTime;
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (shout1Timer >= shout1MaxTimer)
