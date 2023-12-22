@@ -14,21 +14,18 @@ public class boss6 : MonoBehaviour
 
     public static float RicardoHP, RicardoMaxHP = 100f;
 
-    private float speed = 12f;
+    private float speed = 8f;
     private float closeEnough = 2f;
 
     public GameObject normal;
     public GameObject rage;
 
     private float moveTimer;
-    private float canMove = 3f;
-    private float startRaging = 2f;
-    private float stopRaging = 1f;
+    private float canMoveMin = 2f;
+    private float canMoveMax = 3.5f;
+    private float waitToMove = 5.5f;
+    private float startRaging = 1.5f;
 
-    private float xPosition;
-    private float yPosition;
-
-    private bool hitwall = false;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +42,6 @@ public class boss6 : MonoBehaviour
     void Update()
     {
         moveTimer += Time.deltaTime;
-        if (moveTimer >= stopRaging)
-        {
-            normal.SetActive(true);
-            rage.SetActive(false);
-        }
         if (moveTimer >= startRaging)
         {
             normal.SetActive(false);
@@ -60,15 +52,17 @@ public class boss6 : MonoBehaviour
 
     public void Move()
     {
-        if (hitwall == false)
+        if (moveTimer >= canMoveMin && moveTimer <= canMoveMax)
         {
-            transform.Translate(new Vector3(xPosition, yPosition, 0).normalized * Time.deltaTime * speed);
+            transform.Translate((player.position - transform.position).normalized * Time.deltaTime * speed);
         }
-        if (moveTimer >= canMove)
+        if (moveTimer > canMoveMax)
         {
-            hitwall = false;
-            xPosition = player.position.x; 
-            yPosition = player.position.y;
+            normal.SetActive(true);
+            rage.SetActive(false);
+        }
+        if (moveTimer >= waitToMove)
+        {
             moveTimer = 0;
         }
     }
@@ -78,14 +72,6 @@ public class boss6 : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             characterCube.HP -= 10;
-        }
-
-        if (collision.gameObject.CompareTag("border"))
-        {
-            hitwall = true;
-            xPosition = player.position.x;
-            yPosition = player.position.y;
-            transform.Translate(new Vector3(xPosition, yPosition, 0).normalized * Time.deltaTime * speed);
         }
     }
     public void DamageDealt(float damageAmount)
