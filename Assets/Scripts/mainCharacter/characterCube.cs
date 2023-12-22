@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class characterCube : MonoBehaviour
 {
-    //var
-    public static int bossBuildIndex = 0;
-
     public static float HP = 100f;
     public static float backUpHP;
 
@@ -19,8 +16,9 @@ public class characterCube : MonoBehaviour
     public GameObject shotGun;
     public GameObject sniper;
 
-    public string bossSelect;
-    
+    public static int bossBuildIndex = 0;
+    public int bossBuildIndexCount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +36,7 @@ public class characterCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bossBuildIndexCount = bossBuildIndex;
         //tracts HP 
         if (HP < 1)
         {
@@ -46,18 +45,28 @@ public class characterCube : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene("LEVELS");
             HP = backUpHP;
+            if (bossBuildIndex == 7)
+            {
+                SceneManager.LoadScene("TheMainMenu");
+            }
+            else if (bossBuildIndex == 8) SceneManager.LoadScene("TheMainMenu");
+            else
+            {
+                SceneManager.LoadScene("LEVELS");
+                bossBuildIndex = 7;
+            }
         }
         if (Input.GetKey(KeyCode.Return))
         {
             HP = backUpHP;
-            if (bossSelect == "Boss 1") SceneManager.LoadScene("Boss 1");
-            if (bossBuildIndex == 1) SceneManager.LoadScene("Boss 2");
-            if (bossBuildIndex == 2) SceneManager.LoadScene("Boss 3");
-            if (bossBuildIndex == 3) SceneManager.LoadScene("Boss 4");
-            if (bossBuildIndex == 4) SceneManager.LoadScene("Boss 5");
-            if (bossBuildIndex == 5) SceneManager.LoadScene("Boss 6");
+            if (bossBuildIndex == 0) SceneManager.LoadScene("LEVELS");
+            if (bossBuildIndex == 1) SceneManager.LoadScene("Boss 1");
+            if (bossBuildIndex == 2) SceneManager.LoadScene("Boss 2");
+            if (bossBuildIndex == 3) SceneManager.LoadScene("Boss 3");
+            if (bossBuildIndex == 4) SceneManager.LoadScene("Boss 4");
+            if (bossBuildIndex == 5) SceneManager.LoadScene("Boss 5");
+            if (bossBuildIndex == 6) SceneManager.LoadScene("Boss 6");
         }
         if (Input.GetKey(KeyCode.Alpha1))
         {

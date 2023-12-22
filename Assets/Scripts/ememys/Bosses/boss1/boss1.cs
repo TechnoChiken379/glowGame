@@ -84,7 +84,7 @@ public class boss1 : MonoBehaviour
         {
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
-            characterCube.bossBuildIndex = 1;
+            characterCube.bossBuildIndex = 2;
             SceneManager.LoadScene("winScreen");
         }
     }

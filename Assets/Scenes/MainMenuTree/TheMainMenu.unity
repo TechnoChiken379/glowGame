@@ -1182,6 +1182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c5570d6857dda409c6bd8dfbbb846a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pistol: {fileID: 0}
+  shotGun: {fileID: 0}
+  sniper: {fileID: 0}
+  bossSelect: 
 --- !u!50 &335746959
 Rigidbody2D:
   serializedVersion: 4
@@ -1563,11 +1567,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9a1b0231016f504483d19376b36d07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 465486035}
+  characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 1160979822}
-  fireSpeed: 15
-  timer: 0
-  canFire: 0
+  bullet: {fileID: 465486035}
 --- !u!114 &420801889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2299,7 +2301,6 @@ GameObject:
   - component: {fileID: 914172843}
   - component: {fileID: 914172842}
   - component: {fileID: 914172841}
-  - component: {fileID: 914172844}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2381,18 +2382,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &914172844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914172840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &915497668
 GameObject:
   m_ObjectHideFlags: 0
@@ -3695,6 +3684,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
+  Button: {fileID: 8235566487307950500}
 --- !u!1 &1458046467
 GameObject:
   m_ObjectHideFlags: 0
@@ -5255,6 +5246,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+--- !u!114 &8235566487307950500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 737532120119676805, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+  m_PrefabInstance: {fileID: 8235566487307950499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
