@@ -133,7 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7636205}
   - component: {fileID: 7636206}
-  - component: {fileID: 7636207}
   m_Layer: 0
   m_Name: rage
   m_TagString: Untagged
@@ -208,26 +207,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7636207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7636204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c221c41a6a6548047b6fc9509f447b2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Shout1: {fileID: 2228808602545113819, guid: ba706f2011b3e7b4b86fd9c68e6557ce, type: 3}
-  shout1Timer: 0
-  shout1MaxTimer: 4
-  Shout1SpawnPoint: {fileID: 1627175340}
-  Shout2: {fileID: 1934998122451668367, guid: a63f7174fdd336b43bcb382ba0e527bc, type: 3}
-  shout2Timer: 0
-  shout2MaxTimer: 4
-  Shout2SpawnPoint: {fileID: 1627175340}
 --- !u!1 &160817470
 GameObject:
   m_ObjectHideFlags: 0
@@ -3961,6 +3940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2004677726}
+  - component: {fileID: 2004677727}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -3986,6 +3966,26 @@ Transform:
   - {fileID: 1627175340}
   m_Father: {fileID: 1675120415}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2004677727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004677725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c221c41a6a6548047b6fc9509f447b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Shout1: {fileID: 2228808602545113819, guid: ba706f2011b3e7b4b86fd9c68e6557ce, type: 3}
+  shout1Timer: 0
+  shout1MaxTimer: 4
+  Shout1SpawnPoint: {fileID: 2004677726}
+  Shout2: {fileID: 1934998122451668367, guid: a63f7174fdd336b43bcb382ba0e527bc, type: 3}
+  shout2Timer: 0
+  shout2MaxTimer: 4
+  Shout2SpawnPoint: {fileID: 2004677726}
 --- !u!1 &2123325513
 GameObject:
   m_ObjectHideFlags: 0
