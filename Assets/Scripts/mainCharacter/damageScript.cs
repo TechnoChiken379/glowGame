@@ -77,61 +77,91 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<grunt>(out grunt enemyComponent))
         {
             enemyComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<zombieGrunt>(out zombieGrunt enemyZombieComponent))
         {
             enemyZombieComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss1>(out boss1 bossComponent))
         {
             bossComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss2>(out boss2 boss2Component))
         {
             boss2Component.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss3>(out boss3 boss3Component))
         {
             boss3Component.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss4a>(out boss4a boss4aComponent))
         {
             boss4aComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss4b>(out boss4b boss4bComponent))
         {
             boss4bComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss4c>(out boss4c boss4cComponent))
         {
             boss4cComponent.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
         if (collision.gameObject.TryGetComponent<boss5>(out boss5 boss5Component))
         {
             boss5Component.DamageDealt(damageAmount);
-            Destroy(transform.gameObject);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
         }
 
-        //if (collision.gameObject.TryGetComponent<boss5>(out boss5 boss5Component))
-        //{
-        //    boss5Component.DamageDealt(damageAmount);
-        //    Destroy(transform.gameObject);
-        //}
+        if (collision.gameObject.TryGetComponent<boss6>(out boss6 boss6Component))
+        {
+            boss6Component.DamageDealt(damageAmount);
+            if (characterCube.hotKey1 || characterCube.hotKey2)
+            {
+                Destroy(transform.gameObject);
+            }
+        }
     }
 }
