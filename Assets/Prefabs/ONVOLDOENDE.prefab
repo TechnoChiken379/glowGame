@@ -1305,6 +1305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355328330467607460}
   - component: {fileID: 8850439422131406810}
+  - component: {fileID: 3837565038209128943}
   m_Layer: 0
   m_Name: ONVOLDOENDE
   m_TagString: Untagged
@@ -1355,6 +1356,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3837565038209128943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934998122451668367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b6aa0339f95e9748a599f156813ab01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988408277461799186
 GameObject:
   m_ObjectHideFlags: 0
