@@ -217,22 +217,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_text
-      value: 'YOU KILLED A BOSS...
+      value: 'SETTINGS ARE STILL IN PROGRESS
 
-        PRESS "ENTER"
-
-        TO RETURN TO LEVELS...
-
-        GOOD
-        LUCK WITH ALL THE OTHER BOSS''S!!!'
+        PRESS "ESCAPE" TO GO BACK!'
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_fontSize
       value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_fontSizeBase
       value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

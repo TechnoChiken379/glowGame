@@ -118,5 +118,11 @@ public class damageScript : MonoBehaviour
             boss5Component.DamageDealt(damageAmount);
             Destroy(transform.gameObject);
         }
+
+        //if (collision.gameObject.TryGetComponent<boss5>(out boss5 boss5Component))
+        //{
+        //    boss5Component.DamageDealt(damageAmount);
+        //    Destroy(transform.gameObject);
+        //}
     }
 }

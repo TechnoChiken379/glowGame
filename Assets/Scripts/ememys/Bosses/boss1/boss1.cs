@@ -16,7 +16,7 @@ public class boss1 : MonoBehaviour
     private float canFire = 0.1f;
     private float canFireSnipe = 4f;
     private float timer;
-    private float timerSnipe;
+    private float timerSnipe = 0f;
 
     public GameObject bullet;
     public GameObject snipeBullet;
