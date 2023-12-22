@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyHealthBar5 : MonoBehaviour
+public class enemyHealthBar6 : MonoBehaviour
 {
     public float xScale;
     // Start is called before the first frame update
@@ -15,6 +15,6 @@ public class enemyHealthBar5 : MonoBehaviour
     void Update()
     {
         transform.localScale = new Vector3(xScale, 9f, 1f);
-        xScale = 0.593f * boss5.MSHP;
+        xScale = 0.356f * boss6.RicardoHP;
     }
 }

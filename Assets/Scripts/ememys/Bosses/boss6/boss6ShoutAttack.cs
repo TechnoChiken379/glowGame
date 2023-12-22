@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boss5FireBallAttack : MonoBehaviour
+public class boss6ShoutAttack : MonoBehaviour
 {
     private float timer;
     private float canFire = 3;

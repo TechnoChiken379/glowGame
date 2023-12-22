@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class iceBlastDamageScript : MonoBehaviour
+public class smashDamageScript : MonoBehaviour
 {
     private Transform player;
     public Transform iceBlastSpawnPoint;

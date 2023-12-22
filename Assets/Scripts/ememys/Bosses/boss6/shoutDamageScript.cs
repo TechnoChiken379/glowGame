@@ -4,7 +4,7 @@ using Unity.Burst.CompilerServices;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class fireBallDamageScript : MonoBehaviour
+public class shoutDamageScript : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
