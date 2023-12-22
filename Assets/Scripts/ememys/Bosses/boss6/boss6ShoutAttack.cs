@@ -10,12 +10,12 @@ public class boss6ShoutAttack : MonoBehaviour
 
     public GameObject Shout1;
     public float shout1Timer;
-    public float shout1MaxTimer = 7;
+    public float shout1MaxTimer = 4;
     public Transform Shout1SpawnPoint;
 
     public GameObject Shout2;
     public float shout2Timer;
-    public float shout2MaxTimer = 7;
+    public float shout2MaxTimer = 4;
     public Transform Shout2SpawnPoint;
 
     private Transform player;
@@ -26,41 +26,31 @@ public class boss6ShoutAttack : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
-        shout1Timer = 5;
+        shout1Timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (shout1Timer >= 5)
-        {
-            shout2Timer += Time.deltaTime;
-        }
-        if (shout2Timer >= 5)
+        if (shout1Timer >= 0)
         {
             shout1Timer += Time.deltaTime;
+        }
+        if (shout1Timer >= 2)
+        {
+            shout2Timer += Time.deltaTime;
         }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         if (shout1Timer >= shout1MaxTimer)
         {
             Shout1SnipeBullet();
-            shout1Timer = 0;
-            if (shout2Timer >= 5)
-            {
-                shout2Timer = 5;
-            }
         }
 
         if (shout2Timer >= shout2MaxTimer)
         {
             Shout2SnipeBullet();
-            shout2Timer = 0;
-            if (shout1Timer >= 5)
-            {
-                shout1Timer = 5;
-            }
         }
     }
     public void Shout1SnipeBullet()
@@ -73,7 +63,7 @@ public class boss6ShoutAttack : MonoBehaviour
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
             Destroy(spawnedSnipeBullet, 2);
-            timer = 0f;
+            shout1Timer = 0f;
         }
     }
 
@@ -87,7 +77,7 @@ public class boss6ShoutAttack : MonoBehaviour
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
             Destroy(spawnedSnipeBullet, 2);
-            timer = 0f;
+            shout2Timer = 0f;
         }
     }
 }

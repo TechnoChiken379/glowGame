@@ -10,7 +10,7 @@ public class shoutDamageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 10;
+            characterCube.HP -= 2.5f;
             Destroy(transform.gameObject);
         }
     }
