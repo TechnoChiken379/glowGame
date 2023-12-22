@@ -628,16 +628,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.3114846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.3114846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.3114846
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.6940246
+      value: -5.48
       objectReference: {fileID: 0}
     - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 1317916505424626313, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -667,9 +679,129 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: canFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: fireSpeed
+      value: 51.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: palletAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: bulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperFireSpeed
+      value: 56.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunFireSpeed
+      value: 56.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperBulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2062640922861181777, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunBulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: canFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: fireSpeed
+      value: 51.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: palletAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: bulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperFireSpeed
+      value: 56.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunFireSpeed
+      value: 56.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperBulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4863239146313402805, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunBulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6485074408005378965, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_Name
       value: Main Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: canFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: fireSpeed
+      value: 51.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: palletAmount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: bulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunCanFire
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperFireSpeed
+      value: 56.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunFireSpeed
+      value: 56.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: sniperBulletLifeTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: shotGunBulletLifeTime
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
