@@ -23,7 +23,7 @@ public class boss6 : MonoBehaviour
     private float moveTimer;
     private float canMoveMin = 2f;
     private float canMoveMax = 3.5f;
-    private float waitToMove = 5.5f;
+    private float waitToMove = 4.5f;
     private float startRaging = 1.5f;
 
 
