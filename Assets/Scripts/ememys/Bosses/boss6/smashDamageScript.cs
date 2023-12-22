@@ -22,7 +22,8 @@ public class smashDamageScript : MonoBehaviour
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
             characterCube.HP -= 20;
-            Destroy(transform.gameObject);
+
+            Destroy(transform.gameObject, 0.1f);
         }
     }
 }

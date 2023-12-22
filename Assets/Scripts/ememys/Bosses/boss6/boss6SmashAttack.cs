@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class boss6IceBlastAttack : MonoBehaviour
+public class boss6SmashAttack : MonoBehaviour
 {
     private Transform player;
 
     private float timer;
     private float canFire = 2;
-    private float fireSpeed = 20;
+    private float fireSpeed = 16;
 
-    public GameObject iceBlast;
-    public Transform iceBlastSpawnPoint;
+    public GameObject smashFist;
+    public Transform smashFistSpawnPoint;
 
     private float closeEnough = 2.5f;
 
@@ -19,8 +19,6 @@ public class boss6IceBlastAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }
 
@@ -39,12 +37,12 @@ public class boss6IceBlastAttack : MonoBehaviour
     {
         if (timer >= canFire)
         { 
-            GameObject spawnedSnipeBullet = Instantiate(iceBlast, iceBlastSpawnPoint.position, Quaternion.identity);
+            GameObject spawnedSnipeBullet = Instantiate(smashFist, smashFistSpawnPoint.position, Quaternion.identity);
 
-            Vector3 directionToPlayer = (player.position - iceBlastSpawnPoint.position).normalized;
+            Vector3 directionToPlayer = (player.position - smashFistSpawnPoint.position).normalized;
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
-            Destroy(spawnedSnipeBullet, 0.2f);
+            Destroy(spawnedSnipeBullet, 0.4f);
             timer = 0f;
         }
 
