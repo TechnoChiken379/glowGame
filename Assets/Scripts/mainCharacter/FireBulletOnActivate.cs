@@ -12,24 +12,24 @@ public class FireBulletOnActivate : MonoBehaviour
     public GameObject bullet;
 
     //gun
-    private float fireSpeed = 12;
-    private float timer;
-    private float canFire = 0.5f;
-    private float bulletLifeTime = 1f;
+    public float fireSpeed = 12;
+    public float timer;
+    public float canFire = 0.5f;
+    public float bulletLifeTime = 1f;
 
     //sniper
     private float sniperFireSpeed = 30;
     private float sniperTimer;
     private float sniperCanFire = 1.5f;
-    private float sniperBulletLifeTime = 0.5f;
+    private float sniperBulletLifeTime = 0.35f;
 
     //shotgun
-    private float shotGunFireSpeed = 25;
-    private float shotGunTimer;
-    private float shotGunCanFire = 1f;
-    private float shotGunBulletLifeTime = 0.175f;
+    public float shotGunFireSpeed = 25;
+    public float shotGunTimer;
+    public float shotGunCanFire = 1f;
+    public float shotGunBulletLifeTime = 0.175f;
 
-    private float palletAmount = 7;
+    public float palletAmount = 7;
 
     private void Start()
     {
