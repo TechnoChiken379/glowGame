@@ -35,12 +35,12 @@ public class boss6ShoutAttack : MonoBehaviour
         shoutTimer += Time.deltaTime;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (shoutTimer >= shout1MaxTimer)
+        if (shoutTimer == shout1MaxTimer)
         {
             Shout1SnipeBullet();
         }
 
-        if (shoutTimer >= shout2MaxTimer)
+        if (shoutTimer == shout2MaxTimer)
         {
             Shout2SnipeBullet();
             shoutTimer = 0;
