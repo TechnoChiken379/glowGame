@@ -436,6 +436,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '---CONTROLS---
 
+
     L.MOUSE = SHOOT
 
     1. = PISTOL
@@ -445,7 +446,14 @@ MonoBehaviour:
     3.
     = SNIPER
 
-    W.S.A.D = MOVEMENT'
+    W.S.A.D = MOVEMENT
+
+    ESC = LAST MENU SCENE
+
+    ENTER = FIGHT
+    NEXT BOSS
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -472,8 +480,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.83
-  m_fontSizeBase: 0.83
+  m_fontSize: 0.67
+  m_fontSizeBase: 0.67
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -595,18 +603,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '---INFO---
+  m_text: '--- INFO ---
 
-    L.MOUSE = SHOOT
 
-    1. = PISTOL
+    This is our game for glow/video mapping. You have to
+    fight 6 bosses each a little harder than the last and all with their own attacks.
+    Grunts will also spawn throughout the fight. These are enemies that damage you
+    if they touch you, but they will also die in the process.
 
-    2. = SHOTGUN
-
-    3.
-    = SNIPER
-
-    W.S.A.D = MOVEMENT'
+    Game made by Luke
+    and Niek'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
