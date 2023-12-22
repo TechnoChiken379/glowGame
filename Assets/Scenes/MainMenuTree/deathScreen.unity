@@ -1885,7 +1885,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Character
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7587196278162232250, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+    - {fileID: 206447262946189063, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7368,6 +7370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
 --- !u!114 &1204391222
 MonoBehaviour:
   m_ObjectHideFlags: 0
