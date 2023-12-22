@@ -9,12 +9,11 @@ public class boss6ShoutAttack : MonoBehaviour
     private float fireSpeed = 10;
 
     public GameObject Shout1;
-    public float shout1Timer;
-    public float shout1MaxTimer = 4;
+    public float shoutTimer;
+    public float shout1MaxTimer = 2;
     public Transform Shout1SpawnPoint;
 
     public GameObject Shout2;
-    public float shout2Timer;
     public float shout2MaxTimer = 4;
     public Transform Shout2SpawnPoint;
 
@@ -26,35 +25,25 @@ public class boss6ShoutAttack : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
-        shout1Timer = 0;
+        shoutTimer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
-        if (shout1Timer >= 0)
-        {
-            shout1Timer += Time.deltaTime;
-        }
-        if (shout1Timer >= 2)
-        {
-            shout2Timer += Time.deltaTime;
-        }
-        if (shout2Timer >= 2)
-        {
-            shout1Timer += Time.deltaTime;
-        }
+        shoutTimer += Time.deltaTime;
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (shout1Timer >= shout1MaxTimer)
+        if (shoutTimer >= shout1MaxTimer)
         {
             Shout1SnipeBullet();
         }
 
-        if (shout2Timer >= shout2MaxTimer)
+        if (shoutTimer >= shout2MaxTimer)
         {
             Shout2SnipeBullet();
+            shoutTimer = 0;
         }
     }
     public void Shout1SnipeBullet()
@@ -67,7 +56,6 @@ public class boss6ShoutAttack : MonoBehaviour
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
             Destroy(spawnedSnipeBullet, 2);
-            shout1Timer = 0f;
         }
     }
 
@@ -81,7 +69,6 @@ public class boss6ShoutAttack : MonoBehaviour
             spawnedSnipeBullet.GetComponent<Rigidbody2D>().velocity = directionToPlayer * fireSpeed;
 
             Destroy(spawnedSnipeBullet, 2);
-            shout2Timer = 0f;
         }
     }
 }
