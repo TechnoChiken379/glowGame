@@ -5965,7 +5965,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -5995,6 +5995,7 @@ MonoBehaviour:
   pistol: {fileID: 4642224004924082479}
   shotGun: {fileID: 7040729827169880814}
   sniper: {fileID: 6435837834597615112}
+  bossBuildIndexCount: 0
 --- !u!114 &3386316618449043491
 MonoBehaviour:
   m_ObjectHideFlags: 0

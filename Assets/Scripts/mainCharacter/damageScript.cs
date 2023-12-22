@@ -19,7 +19,16 @@ public class damageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (characterCube.hotKey1)
+        {
+            damageAmount = 1;
+        } else if (characterCube.hotKey2)
+        {
+            damageAmount = 1;
+        } else if (characterCube.hotKey3)
+        {
+            damageAmount = 1;
+        }
     }
 
     //void OnCollisionEnter2D(Collision2D collision)

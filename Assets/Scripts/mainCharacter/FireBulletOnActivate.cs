@@ -10,23 +10,33 @@ public class FireBulletOnActivate : MonoBehaviour
     public Transform bulletSpawnPoint;
 
     public GameObject bullet;
+
+    //gun
     private float fireSpeed = 12;
     private float timer;
     private float canFire = 0.5f;
     private float bulletLifeTime = 1f;
 
-    private float sniperFireSpeed = 70;
+    //sniper
+    private float sniperFireSpeed = 30;
     private float sniperTimer;
-    private float sniperCanFire = 2f;
+    private float sniperCanFire = 1.5f;
     private float sniperBulletLifeTime = 0.35f;
 
-    private float shotGunFireSpeed = 30;
+    //shotgun
+    private float shotGunFireSpeed = 25;
     private float shotGunTimer;
     private float shotGunCanFire = 1f;
-    private float shotGunBulletLifeTime = 0.2f;
+    private float shotGunBulletLifeTime = 0.175f;
 
     private float palletAmount = 7;
 
+    private void Start()
+    {
+        timer = 10f;
+        sniperTimer = 10f;
+        shotGunTimer = 10f;
+    }
     void Update()
     {
         timer += Time.deltaTime;
@@ -77,7 +87,7 @@ public class FireBulletOnActivate : MonoBehaviour
             Vector2 baseDirection = (mousePosition - bulletSpawnPoint.position).normalized;
             for (int i = 0; i < palletAmount; i++)
             {
-                float randomAngle = Random.Range(-20f, 20f);
+                float randomAngle = Random.Range(-25f, 25f);
                 Vector2 fireDirection = Quaternion.Euler(0, 0, randomAngle) * baseDirection;
 
                 GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
