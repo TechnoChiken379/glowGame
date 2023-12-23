@@ -10,7 +10,7 @@ public class boss5 : MonoBehaviour
 
     [SerializeField] public characterCube characterCube;
 
-    public static float MSHP, MSMaxHP = 75f;
+    public static float MSHP, MSMaxHP = 90f;
 
     private float speed = 4f;
     private float closeEnough = 2f;

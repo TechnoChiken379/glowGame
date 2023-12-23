@@ -11,7 +11,7 @@ public class zombieGrunt : MonoBehaviour
     public float gruntXPosition = -1;
     public float gruntYPosition = 0f;
 
-    private float gruntSpeed = 4f;
+    private float gruntSpeed = 4.25f;
     public static float zombieGruntHP, zombieGruntMaxHP = 1f;
 
     // Start is called before the first frame update

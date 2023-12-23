@@ -34,9 +34,15 @@ public class boss3Movement : MonoBehaviour
     {
         yPosition = transform.position.y + speed * Time.deltaTime;
 
-        if (yPosition > minMax || yPosition < -minMax)
+        if (yPosition > minMax)
         {
             speed *= -1;
+            yPosition -= 0.1f;
+        }
+        if (yPosition < -minMax)
+        {
+            speed *= -1;
+            yPosition += 0.1f;
         }
 
         transform.position = new Vector3(xPosition, yPosition, 0);

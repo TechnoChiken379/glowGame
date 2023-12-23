@@ -4435,7 +4435,7 @@ MonoBehaviour:
   bullet: {fileID: 2723805555476544301, guid: fce674fe26e2d8e48bc4028fd1187deb, type: 3}
   fireSpeed: 12
   timer: 0
-  canFire: 0.5
+  canFire: 0.25
   bulletLifeTime: 1
   sniperFireSpeed: 30
   sniperTimer: 0
@@ -6979,7 +6979,7 @@ MonoBehaviour:
   bullet: {fileID: 2723805555476544301, guid: 9faf4627ecbba07419f6b919cd0f5475, type: 3}
   fireSpeed: 12
   timer: 0
-  canFire: 0.5
+  canFire: 0.25
   bulletLifeTime: 1
   sniperFireSpeed: 30
   sniperTimer: 0
@@ -7353,7 +7353,7 @@ MonoBehaviour:
   bullet: {fileID: 2723805555476544301, guid: eec6923d11c55f045870fdfbeae808b5, type: 3}
   fireSpeed: 12
   timer: 0
-  canFire: 0.5
+  canFire: 0.25
   bulletLifeTime: 1
   sniperFireSpeed: 30
   sniperTimer: 0

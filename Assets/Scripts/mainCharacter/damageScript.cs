@@ -21,7 +21,7 @@ public class damageScript : MonoBehaviour
     {
         if (characterCube.hotKey1)
         {
-            damageAmount = 2f;
+            damageAmount = 1f;
         } else if (characterCube.hotKey2)
         {
             damageAmount = 0.6f;
@@ -95,7 +95,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss1>(out boss1 bossComponent))
         {
             bossComponent.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -104,7 +104,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss2>(out boss2 boss2Component))
         {
             boss2Component.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -113,7 +113,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss3>(out boss3 boss3Component))
         {
             boss3Component.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -122,7 +122,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss4a>(out boss4a boss4aComponent))
         {
             boss4aComponent.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -131,7 +131,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss4b>(out boss4b boss4bComponent))
         {
             boss4bComponent.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -140,7 +140,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss4c>(out boss4c boss4cComponent))
         {
             boss4cComponent.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -149,7 +149,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss5>(out boss5 boss5Component))
         {
             boss5Component.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }
@@ -158,7 +158,7 @@ public class damageScript : MonoBehaviour
         if (collision.gameObject.TryGetComponent<boss6>(out boss6 boss6Component))
         {
             boss6Component.DamageDealt(damageAmount);
-            if (characterCube.hotKey1 || characterCube.hotKey2)
+            if (characterCube.hotKey1 || characterCube.hotKey2 || characterCube.hotKey3)
             {
                 Destroy(transform.gameObject);
             }

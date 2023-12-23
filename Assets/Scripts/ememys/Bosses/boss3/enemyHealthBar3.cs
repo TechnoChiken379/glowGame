@@ -15,6 +15,6 @@ public class enemyHealthBar3 : MonoBehaviour
     void Update()
     {
         transform.localScale = new Vector3(xScale, 9f, 1f);
-        xScale = 0.712f * boss3.TGHP;
+        xScale = 0.89f * boss3.TGHP;
     }
 }

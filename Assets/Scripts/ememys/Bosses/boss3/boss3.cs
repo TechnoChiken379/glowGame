@@ -10,9 +10,9 @@ public class boss3 : MonoBehaviour
 
     [SerializeField] public characterCube characterCube;
 
-    public static float TGHP, TGMaxHP = 50f;
+    public static float TGHP, TGMaxHP = 40f;
 
-    private float canFire = 2f;
+    private float canFire = 1.3333f;
     private float timer;
 
     public GameObject zombieGrunt;

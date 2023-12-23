@@ -12,17 +12,17 @@ public class boss6 : MonoBehaviour
 
     [SerializeField] public characterCube characterCube;
 
-    public static float RicardoHP, RicardoMaxHP = 100f;
+    public static float RicardoHP, RicardoMaxHP = 75f;
 
-    private float speed = 6f;
+    private float speed = 5f;
 
     public GameObject normal;
     public GameObject rage;
 
     private float moveTimer;
     private float canMoveMin = 2f;
-    private float canMoveMax = 3.5f;
-    private float waitToMove = 4.5f;
+    private float canMoveMax = 4f;
+    private float waitToMove = 5f;
     private float startRaging = 1.5f;
 
 
