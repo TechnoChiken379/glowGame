@@ -29,6 +29,9 @@ public class boss1 : MonoBehaviour
         SQHP = SQMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canFire *= controlScript.controlAttackSpeed;
+        canFireSnipe *= controlScript.controlAttackSpeed;
     }
 
     // Update is called once per frame
@@ -74,7 +77,7 @@ public class boss1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 20;
+            characterCube.HP -= 20 * controlScript.controlDamage;
         }
     }
     public void DamageDealt(float damageAmount)

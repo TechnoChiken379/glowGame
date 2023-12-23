@@ -42,6 +42,8 @@ public class boss4a : MonoBehaviour
         CGHP = CGMaxHP;
         moveTimer = 10;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canFireSnipe *= controlScript.controlAttackSpeed;
     }
     public void Move()
     { 
@@ -89,7 +91,7 @@ public class boss4a : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 10;
+            characterCube.HP -= 10 * controlScript.controlDamage;
         }
     }
 

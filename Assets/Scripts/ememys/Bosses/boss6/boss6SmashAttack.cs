@@ -20,6 +20,8 @@ public class boss6SmashAttack : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canFire *= controlScript.controlAttackSpeed;
     }
 
     // Update is called once per frame

@@ -21,7 +21,7 @@ public class smashDamageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 20;
+            characterCube.HP -= 20 * controlScript.controlDamage;
 
             Destroy(transform.gameObject, 0.1f);
         }

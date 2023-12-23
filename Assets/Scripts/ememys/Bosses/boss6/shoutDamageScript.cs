@@ -23,7 +23,7 @@ public class shoutDamageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 5f;
+            characterCube.HP -= 5f * controlScript.controlDamage;
             Destroy(transform.gameObject);
         }
     }

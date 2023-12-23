@@ -24,6 +24,8 @@ public class boss3 : MonoBehaviour
         TGHP = TGMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canFire *= controlScript.controlAttackSpeed;
     }
 
     // Update is called once per frame
@@ -60,7 +62,7 @@ public class boss3 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 20;
+            characterCube.HP -= 20 * controlScript.controlDamage;
         }
     }
     public void DamageDealt(float damageAmount)

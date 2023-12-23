@@ -19,7 +19,9 @@ public class bulletSpawnPointScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        chooseNewPosition *= controlScript.controlAttackSpeed;
+
+
     }
 
     // Update is called once per frame

@@ -45,6 +45,8 @@ public class boss4c : MonoBehaviour
         moveTimer = 15;
         timerShotgun = 1f;
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canFire *= controlScript.controlAttackSpeed;
     }
     public void Move()
     {
@@ -97,7 +99,7 @@ public class boss4c : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 10;
+            characterCube.HP -= 10 * controlScript.controlDamage;
         }
     }
 

@@ -28,6 +28,8 @@ public class boss2 : MonoBehaviour
         IBHP = IBMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        canTeleport *= controlScript.controlAttackSpeed;
     }
 
     // Update is called once per frame
@@ -86,7 +88,7 @@ public class boss2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 20;
+            characterCube.HP -= 20 * controlScript.controlDamage;
         }
     }
     public void DamageDealt(float damageAmount)

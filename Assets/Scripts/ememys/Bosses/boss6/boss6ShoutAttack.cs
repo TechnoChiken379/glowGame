@@ -23,6 +23,8 @@ public class boss6ShoutAttack : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
         shoutTimer = 0;
+
+        canFire *= controlScript.controlAttackSpeed;
     }
 
     // Update is called once per frame

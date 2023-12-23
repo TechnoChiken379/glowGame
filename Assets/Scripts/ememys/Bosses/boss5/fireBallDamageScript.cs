@@ -10,7 +10,7 @@ public class fireBallDamageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 10;
+            characterCube.HP -= 10 * controlScript.controlDamage;
             Destroy(transform.gameObject);
         }
     }

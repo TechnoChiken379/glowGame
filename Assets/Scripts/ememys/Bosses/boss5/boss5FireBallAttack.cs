@@ -18,7 +18,7 @@ public class boss5FireBallAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        canFire *= controlScript.controlAttackSpeed;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
     }

@@ -14,7 +14,7 @@ public class gurntSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        canSpawn = 10 * controlScript.controlGruntSpawnRate;
     }
 
     // Update is called once per frame

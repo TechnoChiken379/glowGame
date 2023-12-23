@@ -47,7 +47,7 @@ public class boss5 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 10;
+            characterCube.HP -= 10 * controlScript.controlDamage;
         }
     }
     public void DamageDealt(float damageAmount)

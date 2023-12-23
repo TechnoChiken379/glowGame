@@ -8,7 +8,7 @@ public class bulletDamageScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("mainCharacter"))
         {
-            characterCube.HP -= 5;
+            characterCube.HP -= 5 * controlScript.controlDamage;
             Destroy(transform.gameObject);
         }
     }

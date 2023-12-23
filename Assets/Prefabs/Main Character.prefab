@@ -5847,6 +5847,7 @@ GameObject:
   - component: {fileID: 1163968098719723957}
   - component: {fileID: 3386316618449043491}
   - component: {fileID: 7730325697611970623}
+  - component: {fileID: 7323499244336982259}
   m_Layer: 7
   m_Name: MainCharacterCube
   m_TagString: mainCharacter
@@ -6038,6 +6039,18 @@ MonoBehaviour:
   canNotTelePort: {fileID: 2100000, guid: d996f950341fdb649a1bbfe56c99f7b6, type: 2}
   canTeleportblue: {fileID: 2100000, guid: 3bb642e4d58752048b70468c2971937f, type: 2}
   canTeleportYellow: {fileID: 2100000, guid: 61ff0a44b96d5334bb23214c2c5478ef, type: 2}
+--- !u!114 &7323499244336982259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591661741469147210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd8cede140e59a4f9ea0b350e452669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5649198017205353146
 GameObject:
   m_ObjectHideFlags: 0

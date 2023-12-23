@@ -27,7 +27,7 @@ public class enemyDamageScript : MonoBehaviour
         {
             Destroy(transform.gameObject);
             Debug.Log("Obstacle detected!");
-            characterCube.HP -= 2;
+            characterCube.HP -= 2 * controlScript.controlDamage;
         }
         //    if (grunt.gruntHP == 0)
         //    {
