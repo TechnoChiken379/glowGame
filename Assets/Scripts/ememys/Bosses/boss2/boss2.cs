@@ -30,6 +30,8 @@ public class boss2 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
 
         canTeleport *= controlScript.controlAttackSpeed;
+
+        characterCube.bossBuildIndex = 2;
     }
 
     // Update is called once per frame

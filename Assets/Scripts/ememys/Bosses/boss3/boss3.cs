@@ -26,6 +26,8 @@ public class boss3 : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
 
         canFire *= controlScript.controlAttackSpeed;
+
+        characterCube.bossBuildIndex = 3;
     }
 
     // Update is called once per frame

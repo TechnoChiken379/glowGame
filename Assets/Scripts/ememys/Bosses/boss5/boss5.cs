@@ -22,6 +22,8 @@ public class boss5 : MonoBehaviour
         MSHP = MSMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
+
+        characterCube.bossBuildIndex = 5;
     }
 
     // Update is called once per frame

@@ -44,6 +44,8 @@ public class boss4a : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
 
         canFireSnipe *= controlScript.controlAttackSpeed;
+
+        characterCube.bossBuildIndex = 4;
     }
     public void Move()
     { 

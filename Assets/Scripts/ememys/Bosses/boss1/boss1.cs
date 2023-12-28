@@ -32,6 +32,8 @@ public class boss1 : MonoBehaviour
 
         canFire *= controlScript.controlAttackSpeed;
         canFireSnipe *= controlScript.controlAttackSpeed;
+
+        characterCube.bossBuildIndex = 1;
     }
 
     // Update is called once per frame

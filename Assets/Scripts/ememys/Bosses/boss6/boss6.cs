@@ -35,6 +35,8 @@ public class boss6 : MonoBehaviour
 
         normal.SetActive(true);
         rage.SetActive(false);
+
+        characterCube.bossBuildIndex = 6;
     }
 
     // Update is called once per frame
