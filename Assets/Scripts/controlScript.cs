@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class controlScript : MonoBehaviour
 {
-    public static float controlDamage; //make damage lower for less damage, higher for more
-    public static float controlAttackSpeed; //make attack speed higher for slower attacks, lower for faster attacks
-    public static float controlGruntSpawnRate; //make higher to spawn less grunts, lower to spawn more
+    public static float controlDamage = 0.75f; //make damage lower for less damage, higher for more
+    public static float controlAttackSpeed = 1.5f; //make attack speed higher for slower attacks, lower for faster attacks
+    public static float controlGruntSpawnRate = 1.25f; //make higher to spawn less grunts, lower to spawn more
 
     public static bool easyMode = false;
     public static bool mediumMode = false;

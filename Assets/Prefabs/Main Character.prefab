@@ -5980,8 +5980,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 50
-  m_LinearDrag: 0
+  m_Mass: 10
+  m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -6051,6 +6051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd8cede140e59a4f9ea0b350e452669, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easyButton: {fileID: 0}
+  mediumButton: {fileID: 0}
+  hardButton: {fileID: 0}
 --- !u!1 &5649198017205353146
 GameObject:
   m_ObjectHideFlags: 0
