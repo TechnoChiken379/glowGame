@@ -10,9 +10,13 @@ public class controlScript : MonoBehaviour
     public static float controlAttackSpeed; //make attack speed higher for slower attacks, lower for faster attacks
     public static float controlGruntSpawnRate; //make higher to spawn less grunts, lower to spawn more
 
-    public static bool easyMode = false;
-    public static bool mediumMode = false;
-    public static bool hardMode = false;
+    public static bool easyMode;
+    public static bool mediumMode;
+    public static bool hardMode;
+
+    public static bool hMode;
+    public static bool mMode;
+    public static bool eMode;
 
     public Button easyButton;
     public Button mediumButton;
@@ -24,7 +28,7 @@ public class controlScript : MonoBehaviour
         mediumButton.onClick.AddListener(mediumModeSettings);
         hardButton.onClick.AddListener(hardModeSettings);
 
-        mediumMode = true;
+        easyMode = true;
         settingsChecker();
     }
 
@@ -63,11 +67,9 @@ public class controlScript : MonoBehaviour
             controlAttackSpeed = 2f; // make attack speed higher for slower attacks, lower for faster attacks
             controlGruntSpawnRate = 1.5f; //make higher to spawn less grunts, lower to spawn more
 
-            Debug.Log("eMode");
-
-            easyMode = false;
-            mediumMode = false;
-            hardMode = false;
+            eMode = true;
+            mMode = false;
+            hMode = false;
         }
         else if (mediumMode == true)
         {
@@ -75,11 +77,9 @@ public class controlScript : MonoBehaviour
             controlAttackSpeed = 1.5f; //make attack speed higher for slower attacks, lower for faster attacks
             controlGruntSpawnRate = 1.25f; //make higher to spawn less grunts, lower to spawn more
 
-            Debug.Log("mMode");
-
-            easyMode = false;
-            mediumMode = false;
-            hardMode = false;
+            eMode = false;
+            mMode = true;
+            hMode = false;
         }
         else if (hardMode == true)
         {
@@ -87,11 +87,9 @@ public class controlScript : MonoBehaviour
             controlAttackSpeed = 1f; // make attack speed higher for slower attacks, lower for faster attacks
             controlGruntSpawnRate = 1f; //make higher to spawn less grunts, lower to spawn more
 
-            Debug.Log("hMode");
-
-            easyMode = false;
-            mediumMode = false;
-            hardMode = false;
+            eMode = false;
+            mMode = false;
+            hMode = true;
         }
     }
 }
