@@ -311,6 +311,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5254359069035998264, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -363,6 +367,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1148522784331022608, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2557469352248430003, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -447,13 +455,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6654850676055502163, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_text
-      value: Choose the difficultie that fits for your skills
+      value: Choose the difficultie that fits the best to your skill level
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_fontSize
       value: 0.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_margin.w
+      value: -48.567455
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_margin.x
+      value: -10.30709
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_margin.y
+      value: 46.503193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: m_margin.z
+      value: 4.372514
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_fontStyle
@@ -466,6 +494,10 @@ PrefabInstance:
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_VerticalAlignment
       value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: delayBeforeStart
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3591075572001850627, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
@@ -554,6 +586,10 @@ PrefabInstance:
     - target: {fileID: 6485074408005378965, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_Name
       value: Main Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 6485074408005378965, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6729515119674107794, guid: 465f9c611fc162e4ab323a861388c1a2, type: 3}
       propertyPath: m_Enabled
@@ -773,6 +809,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5254359069035998264, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -945,6 +985,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5254359069035998264, guid: d32b4e90f8960b64baeebbeeb98d8221, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1075,7 +1119,7 @@ Transform:
   m_GameObject: {fileID: 2097002965}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -7.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
