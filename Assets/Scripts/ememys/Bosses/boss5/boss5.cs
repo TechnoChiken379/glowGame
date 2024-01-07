@@ -31,6 +31,9 @@ public class boss5 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        bossFightingTimer.bossFightingTimerFLOAT += Time.deltaTime;
+        bossFightingTimer.bossFightingTimerINT = Mathf.FloorToInt(bossFightingTimer.bossFightingTimerFLOAT);
+
         Move();
     }
 

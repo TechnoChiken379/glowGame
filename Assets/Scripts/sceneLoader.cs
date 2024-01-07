@@ -56,11 +56,14 @@ public class sceneLoader : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("TheMainMenu");
+
         bossCheckIndicator.boss1Check = false;
         bossCheckIndicator.boss2Check = false;
         bossCheckIndicator.boss3Check = false;
         bossCheckIndicator.boss4Check = false;
         bossCheckIndicator.boss5Check = false;
         bossCheckIndicator.boss6Check = false;
+
+        bossFightingTimer.bossFightingTimerFLOAT = 0;
     }
 }
