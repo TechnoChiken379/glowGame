@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 0.83
       objectReference: {fileID: 0}
+    - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: lettersPerSecond
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -580,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 50
   welcomeText: {fileID: 1788804868}
   delayBeforeStart: 0.99
 --- !u!114 &1788804868
@@ -609,10 +613,11 @@ MonoBehaviour:
     This is our game for glow/video mapping. You have to
     fight 6 bosses each a little harder than the last and all with their own attacks.
     Grunts will also spawn throughout the fight. These are enemies that damage you
-    if they touch you, but they will also die in the process.
+    if they touch you, but they will also die in the process. You can teleport (back
+    and forth) using the colored pyramids. From blue to blue and yellow to yellow.
 
-    Game made by Luke
-    and Niek'
+    Game
+    made by Luke and Niek'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -639,8 +644,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.5
-  m_fontSizeBase: 0.5
+  m_fontSize: 0.45
+  m_fontSizeBase: 0.45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

@@ -1707,6 +1707,19 @@ MonoBehaviour:
   characterCube: {fileID: 0}
   bulletSpawnPoint: {fileID: 1160979822}
   bullet: {fileID: 465486035}
+  fireSpeed: 12
+  timer: 0
+  canFire: 0.25
+  bulletLifeTime: 1
+  sniperFireSpeed: 30
+  sniperTimer: 0
+  sniperCanFire: 1.5
+  sniperBulletLifeTime: 0.5
+  shotGunFireSpeed: 25
+  shotGunTimer: 0
+  shotGunCanFire: 1
+  shotGunBulletLifeTime: 0.2
+  palletAmount: 7
 --- !u!114 &420801889
 MonoBehaviour:
   m_ObjectHideFlags: 0

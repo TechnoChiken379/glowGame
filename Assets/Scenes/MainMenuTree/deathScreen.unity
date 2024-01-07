@@ -14353,7 +14353,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3908414053293275495, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
       propertyPath: lettersPerSecond
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5963771785255797795, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
       propertyPath: m_text

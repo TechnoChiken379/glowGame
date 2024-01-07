@@ -83,20 +83,24 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && shotGunTimer >= shotGunCanFire)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 baseDirection = (mousePosition - bulletSpawnPoint.position).normalized;
+            //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //Vector2 baseDirection = (mousePosition - bulletSpawnPoint.position).normalized;
+
+            //Vector2 baseDirection = bulletSpawnPoint.right.normalized;
+            Vector2 baseDirection = bulletSpawnPoint.up.normalized;
+
             for (int i = 0; i < palletAmount; i++)
             {
                 float randomAngle = Random.Range(-25f, 25f);
                 Vector2 fireDirection = Quaternion.Euler(0, 0, randomAngle) * baseDirection;
 
-                GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
+                GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);//
                 spawnedBullet.transform.right = fireDirection;
 
-                spawnedBullet.GetComponent<Rigidbody2D>().velocity = fireDirection.normalized * shotGunFireSpeed;
-                Destroy(spawnedBullet, shotGunBulletLifeTime);
+                spawnedBullet.GetComponent<Rigidbody2D>().velocity = fireDirection.normalized * shotGunFireSpeed;//
+                Destroy(spawnedBullet, shotGunBulletLifeTime);//
             }
-            shotGunTimer = 0f;
+            shotGunTimer = 0f;//
         }
     }
 }
