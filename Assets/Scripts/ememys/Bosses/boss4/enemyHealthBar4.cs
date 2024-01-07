@@ -8,7 +8,7 @@ public class enemyHealthBar4 : MonoBehaviour
     public bossCheckIndicator bossCheckIndicator;
 
     public float xScale;
-    private float totalCGHP;
+    public static float totalCGHP;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,12 @@ public class enemyHealthBar4 : MonoBehaviour
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 5;
-            SceneManager.LoadScene("winScreen");
+
+            if (bossCheckIndicator.allBossesDead == true)
+            {
+                SceneManager.LoadScene("epicWinScreen");
+            }
+            else SceneManager.LoadScene("winScreen");
         }
 
     }

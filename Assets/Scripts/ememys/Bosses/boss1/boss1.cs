@@ -92,7 +92,12 @@ public class boss1 : MonoBehaviour
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 2;
-            SceneManager.LoadScene("winScreen");
+
+            if (bossCheckIndicator.allBossesDead == true)
+            {
+                SceneManager.LoadScene("epicWinScreen");
+            }
+            else SceneManager.LoadScene("winScreen");
 
             bossCheckIndicator.boss1Check = true;
         }

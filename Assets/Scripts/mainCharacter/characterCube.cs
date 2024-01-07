@@ -19,6 +19,13 @@ public class characterCube : MonoBehaviour
     public static int bossBuildIndex = 8;
     public int bossBuildIndexCount;
 
+    boss1 boss1;
+    boss2 boss2;
+    boss3 boss3;
+    enemyHealthBar4 enemyHealthBar4;
+    boss5 boss5;
+    boss6 boss6;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -97,6 +104,15 @@ public class characterCube : MonoBehaviour
             pistol.SetActive(false);
             shotGun.SetActive(false);
             sniper.SetActive(true);
+        }
+        if (Input.GetKey(KeyCode.End))
+        {
+            boss1.SQHP = 0;
+            boss2.IBHP = 0;
+            boss3.TGHP = 0;
+            enemyHealthBar4.totalCGHP = 0;
+            boss5.MSHP = 0;
+            boss6.RicardoHP = 0;
         }
     }
 }
