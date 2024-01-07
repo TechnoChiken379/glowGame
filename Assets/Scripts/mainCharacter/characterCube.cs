@@ -22,7 +22,9 @@ public class characterCube : MonoBehaviour
     boss1 boss1;
     boss2 boss2;
     boss3 boss3;
-    enemyHealthBar4 enemyHealthBar4;
+    boss4a boss4A;
+    boss4b boss4B;
+    boss4c boss4C;
     boss5 boss5;
     boss6 boss6;
 
@@ -44,12 +46,14 @@ public class characterCube : MonoBehaviour
     void Update()
     {
         bossBuildIndexCount = bossBuildIndex;
+
         //tracts HP 
         if (HP < 1)
         {
             SceneManager.LoadScene("deathScreen");
             HP = backUpHP;
         }
+
         if (Input.GetKey(KeyCode.Escape))
         {
             HP = backUpHP;
@@ -64,6 +68,7 @@ public class characterCube : MonoBehaviour
                 bossBuildIndex = 7;
             }
         }
+
         if (Input.GetKey(KeyCode.Return))
         {
             HP = backUpHP;
@@ -75,6 +80,7 @@ public class characterCube : MonoBehaviour
             if (bossBuildIndex == 5) SceneManager.LoadScene("Boss 5");
             if (bossBuildIndex == 6) SceneManager.LoadScene("Boss 6");
         }
+
         if (Input.GetKey(KeyCode.Alpha1))
         {
             hotKey1 = true;
@@ -105,12 +111,15 @@ public class characterCube : MonoBehaviour
             shotGun.SetActive(false);
             sniper.SetActive(true);
         }
+
         if (Input.GetKey(KeyCode.End))
         {
             boss1.SQHP = 0;
             boss2.IBHP = 0;
             boss3.TGHP = 0;
-            enemyHealthBar4.totalCGHP = 0;
+            boss4a.CGHP = 0;
+            boss4b.CGHP = 0;
+            boss4c.CGHP = 0;
             boss5.MSHP = 0;
             boss6.RicardoHP = 0;
         }
