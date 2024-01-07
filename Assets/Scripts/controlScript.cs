@@ -10,9 +10,9 @@ public class controlScript : MonoBehaviour
     public static float controlAttackSpeed = 1.5f; //make attack speed higher for slower attacks, lower for faster attacks
     public static float controlGruntSpawnRate = 1.25f; //make higher to spawn less grunts, lower to spawn more
 
-    public static bool easyMode;
-    public static bool mediumMode;
-    public static bool hardMode;
+    public static bool easyMode = false;
+    public static bool mediumMode = false;
+    public static bool hardMode = false;
 
     public static bool hMode;
     public static bool mMode;
@@ -22,14 +22,19 @@ public class controlScript : MonoBehaviour
     public Button mediumButton;
     public Button hardButton;
 
+    public difficultieIndicator difficultieIndicator;
+
     void Start()
     {
         easyButton.onClick.AddListener(easyModeSettings);
         mediumButton.onClick.AddListener(mediumModeSettings);
         hardButton.onClick.AddListener(hardModeSettings);
 
-        easyMode = true;
-        settingsChecker();
+        if (easyMode == false && mediumMode == false && hardMode == false)
+        {
+            easyMode = true;
+            settingsChecker();
+        }
     }
 
     public void easyModeSettings()
@@ -61,7 +66,7 @@ public class controlScript : MonoBehaviour
 
     private void settingsChecker()
     {
-        if (easyMode == true)
+        if (easyMode == true || difficultieIndicator.startDifficultie == true)
         {
             controlDamage = 0.5f; //make damage lower for less damage, higher for more
             controlAttackSpeed = 2f; // make attack speed higher for slower attacks, lower for faster attacks
@@ -70,6 +75,13 @@ public class controlScript : MonoBehaviour
             eMode = true;
             mMode = false;
             hMode = false;
+
+            Debug.Log("eMODE");
+
+            if (difficultieIndicator.startDifficultie == true)
+            {
+                easyMode = true;
+            }
         }
         else if (mediumMode == true)
         {

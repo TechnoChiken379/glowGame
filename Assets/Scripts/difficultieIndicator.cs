@@ -8,6 +8,8 @@ public class difficultieIndicator : MonoBehaviour
     public controlScript ControlScript;
     public TMP_Text textMP;
 
+    public static bool startDifficultie = false;
+
     void Start()
     {
         
@@ -16,14 +18,19 @@ public class difficultieIndicator : MonoBehaviour
     void Update()
     {
         textUpdater();
+        if (controlScript.easyMode == false && controlScript.mediumMode == false && controlScript.hardMode == false)
+        {
+            startDifficultie = true;
+        }
+        else
+        {
+            startDifficultie = false;
+        }
     }
 
     void textUpdater()
     {
-        if (controlScript.eMode == true)
-        {
-            textMP.text = ("EASY");
-        }
+        if (controlScript.eMode == true) textMP.text = ("EASY");
         else if (controlScript.mMode == true) textMP.SetText("MEDIUM");
         else if (controlScript.hMode == true) textMP.SetText("HARD");
     }
