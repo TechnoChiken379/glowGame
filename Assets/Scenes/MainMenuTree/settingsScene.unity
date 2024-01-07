@@ -499,6 +499,10 @@ PrefabInstance:
       propertyPath: delayBeforeStart
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: lettersPerSecond
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3591075572001850627, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
     m_RemovedGameObjects: []
