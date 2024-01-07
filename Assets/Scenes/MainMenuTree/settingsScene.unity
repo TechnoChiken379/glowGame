@@ -449,9 +449,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_text
-      value: 'SETTINGS ARE STILL IN PROGRESS
-
-        PRESS "ESCAPE" TO GO BACK!'
+      value: Choose the difficultie that fits for your skills
       objectReference: {fileID: 0}
     - target: {fileID: 6907280490432324738, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: m_fontSize
