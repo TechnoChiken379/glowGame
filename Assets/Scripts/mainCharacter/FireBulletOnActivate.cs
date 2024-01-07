@@ -83,9 +83,12 @@ public class FireBulletOnActivate : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && shotGunTimer >= shotGunCanFire)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             //Vector2 baseDirection = (mousePosition - bulletSpawnPoint.position).normalized;
-            Vector2 baseDirection = bulletSpawnPoint.right.normalized;
+
+            //Vector2 baseDirection = bulletSpawnPoint.right.normalized;
+            Vector2 baseDirection = bulletSpawnPoint.up.normalized;
+
             for (int i = 0; i < palletAmount; i++)
             {
                 float randomAngle = Random.Range(-25f, 25f);
