@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class controlScript : MonoBehaviour
 {
-    public static float controlDamage;
-    public static float controlAttackSpeed;
-    public static float controlGruntSpawnRate;
+    public static float controlDamage; //make damage lower for less damage, higher for more
+    public static float controlAttackSpeed; //make attack speed higher for slower attacks, lower for faster attacks
+    public static float controlGruntSpawnRate; //make higher to spawn less grunts, lower to spawn more
 
     public static bool easyMode = false;
     public static bool mediumMode = false;
@@ -18,24 +18,14 @@ public class controlScript : MonoBehaviour
     public Button mediumButton;
     public Button hardButton;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         easyButton.onClick.AddListener(easyModeSettings);
         mediumButton.onClick.AddListener(mediumModeSettings);
         hardButton.onClick.AddListener(hardModeSettings);
 
-        controlDamage = 0.5f; //make damage lower for less damage, higher for more
-        controlAttackSpeed = 2f; // make attack speed higher for slower attacks, lower for faster attacks
-        controlGruntSpawnRate = 1f; //make higher to spawn less grunts, lower to spawn more
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log(controlDamage);
+        easyMode = true;
+        settingsChecker();
     }
 
     public void easyModeSettings()
@@ -67,7 +57,6 @@ public class controlScript : MonoBehaviour
 
     private void settingsChecker()
     {
-        Debug.Log("settingscheck");
         if (easyMode == true)
         {
             controlDamage = 0.5f; //make damage lower for less damage, higher for more
