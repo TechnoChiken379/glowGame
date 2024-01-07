@@ -450,8 +450,8 @@ MonoBehaviour:
 
     ESC = LAST MENU SCENE
 
-    ENTER = FIGHT
-    NEXT BOSS
+    ENTER = RETRY
+    BOSS/ FIGHT NEXT BOSS
 
 '
   m_isRightToLeft: 0
