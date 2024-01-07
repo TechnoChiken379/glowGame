@@ -8,6 +8,9 @@ using UnityEngine.UI;
 public class sceneLoader : MonoBehaviour
 {
     public characterCube characterCube;
+    public bossCheckIndicator bossCheckIndicator;
+
+    public Button restartGameButton;
     public Button Button;
     public Button L1Button;
     public Button L2Button;
@@ -18,6 +21,8 @@ public class sceneLoader : MonoBehaviour
 
     private void Start()
     {
+        restartGameButton.onClick.AddListener(RestartGame);
+
         Button.onClick.AddListener(OnClick);
 
         L1Button.onClick.AddListener(NewOnClick);
@@ -46,5 +51,16 @@ public class sceneLoader : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene("TheMainMenu");
+        bossCheckIndicator.boss1Check = false;
+        bossCheckIndicator.boss2Check = false;
+        bossCheckIndicator.boss3Check = false;
+        bossCheckIndicator.boss4Check = false;
+        bossCheckIndicator.boss5Check = false;
+        bossCheckIndicator.boss6Check = false;
     }
 }

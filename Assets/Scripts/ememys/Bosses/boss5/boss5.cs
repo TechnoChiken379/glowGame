@@ -8,6 +8,8 @@ public class boss5 : MonoBehaviour
 {
     private Transform player;
 
+    public bossCheckIndicator bossCheckIndicator;
+
     [SerializeField] public characterCube characterCube;
 
     public static float MSHP, MSMaxHP = 90f;
@@ -57,6 +59,8 @@ public class boss5 : MonoBehaviour
         MSHP -= damageAmount;
         if (MSHP <= 0)
         {
+            bossCheckIndicator.boss5Check = true;
+
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 6;

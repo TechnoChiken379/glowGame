@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class enemyHealthBar4 : MonoBehaviour
 {
+    public bossCheckIndicator bossCheckIndicator;
+
     public float xScale;
     private float totalCGHP;
 
@@ -23,6 +25,8 @@ public class enemyHealthBar4 : MonoBehaviour
 
         if (totalCGHP <= 0)
         {
+            bossCheckIndicator.boss4Check = true;
+
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 5;

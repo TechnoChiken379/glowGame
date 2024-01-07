@@ -8,6 +8,8 @@ public class boss1 : MonoBehaviour
 {
     private Transform player;
 
+    public bossCheckIndicator bossCheckIndicator;
+
     [SerializeField] public characterCube characterCube;
 
     public static float SQHP, SQMaxHP = 50f;
@@ -91,6 +93,8 @@ public class boss1 : MonoBehaviour
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 2;
             SceneManager.LoadScene("winScreen");
+
+            bossCheckIndicator.boss1Check = true;
         }
     }
 }

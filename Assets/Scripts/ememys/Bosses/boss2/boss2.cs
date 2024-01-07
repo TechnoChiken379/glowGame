@@ -8,6 +8,8 @@ public class boss2 : MonoBehaviour
 {
     private Transform player;
 
+    public bossCheckIndicator bossCheckIndicator;
+
     [SerializeField] public characterCube characterCube;
 
     public static float IBHP, IBMaxHP = 60f;
@@ -98,6 +100,8 @@ public class boss2 : MonoBehaviour
         IBHP -= damageAmount;
         if (IBHP <= 0)
         {
+            bossCheckIndicator.boss2Check = true;
+
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 3;

@@ -10,6 +10,8 @@ public class boss6 : MonoBehaviour
 {
     private Transform player;
 
+    public bossCheckIndicator bossCheckIndicator;
+
     [SerializeField] public characterCube characterCube;
 
     public static float RicardoHP, RicardoMaxHP = 75f;
@@ -80,6 +82,8 @@ public class boss6 : MonoBehaviour
         RicardoHP -= damageAmount;
         if (RicardoHP <= 0)
         {
+            bossCheckIndicator.boss6Check = true;
+
             Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 6;
