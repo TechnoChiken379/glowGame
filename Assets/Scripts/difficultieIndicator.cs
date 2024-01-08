@@ -12,7 +12,7 @@ public class difficultieIndicator : MonoBehaviour
 
     void Start()
     {
-        
+        textMP.text = ("EASY");
     }
 
     void Update()
