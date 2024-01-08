@@ -1121,6 +1121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterCube: {fileID: 0}
+  bossCheckIndicator: {fileID: 0}
+  restartGameButton: {fileID: 0}
   Button: {fileID: 0}
   L1Button: {fileID: 0}
   L2Button: {fileID: 0}
@@ -1561,6 +1563,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterCube: {fileID: 0}
+  bossCheckIndicator: {fileID: 0}
+  restartGameButton: {fileID: 0}
   Button: {fileID: 504401709}
   L1Button: {fileID: 0}
   L2Button: {fileID: 0}
@@ -2626,6 +2630,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 956037879}
     m_Modifications:
+    - target: {fileID: 3908414053293275495, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
+      propertyPath: delayBeforeStart
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 3908414053293275495, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
       propertyPath: lettersPerSecond
       value: 20

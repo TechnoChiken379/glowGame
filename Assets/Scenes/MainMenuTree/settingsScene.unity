@@ -364,7 +364,6 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
-  devTool: {fileID: 0}
   difficultieIndicator: {fileID: 0}
 --- !u!1001 &917923326
 PrefabInstance:
@@ -504,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: delayBeforeStart
-      value: 0.7
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: lettersPerSecond
@@ -871,7 +870,6 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
-  devTool: {fileID: 0}
   difficultieIndicator: {fileID: 0}
 --- !u!1001 &1151370956
 PrefabInstance:
@@ -1049,7 +1047,6 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
-  devTool: {fileID: 0}
   difficultieIndicator: {fileID: 0}
 --- !u!1 &2097002965
 GameObject:

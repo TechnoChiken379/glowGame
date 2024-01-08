@@ -228,6 +228,10 @@ PrefabInstance:
       value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
+      propertyPath: delayBeforeStart
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8331368406385567244, guid: c7dbb98c1ca974047bceb5a71fda980e, type: 3}
       propertyPath: lettersPerSecond
       value: 20
       objectReference: {fileID: 0}
@@ -415,9 +419,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 30
   welcomeText: {fileID: 1337812702}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0.35
 --- !u!114 &1337812702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -586,7 +590,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lettersPerSecond: 50
   welcomeText: {fileID: 1788804868}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0.35
 --- !u!114 &1788804868
 MonoBehaviour:
   m_ObjectHideFlags: 0

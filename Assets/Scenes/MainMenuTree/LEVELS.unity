@@ -3245,7 +3245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lettersPerSecond: 10
   welcomeText: {fileID: 915497670}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0.35
 --- !u!1 &962209427
 GameObject:
   m_ObjectHideFlags: 0
