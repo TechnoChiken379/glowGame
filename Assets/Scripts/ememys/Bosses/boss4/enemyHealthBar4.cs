@@ -42,6 +42,7 @@ public class enemyHealthBar4 : MonoBehaviour
 
         void winScreenChecker()
         {
+            bossCheckIndicator.boss4Check = true;
             if (bossCheckIndicator.boss4Check == true && bossCheckIndicator.allBossesDead == true)
             {
                 SceneManager.LoadScene("epicWinScreen");

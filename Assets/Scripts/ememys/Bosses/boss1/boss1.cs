@@ -107,6 +107,7 @@ public class boss1 : MonoBehaviour
 
     void winScreenChecker()
     {
+        bossCheckIndicator.boss1Check = true;
         if (bossCheckIndicator.boss1Check == true && bossCheckIndicator.allBossesDead == true)
         {
             SceneManager.LoadScene("epicWinScreen");
