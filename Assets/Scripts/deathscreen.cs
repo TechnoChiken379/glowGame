@@ -16,8 +16,8 @@ public class deathscreen : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            characterCube.HP = 100;
-            SceneManager.LoadScene("LEVELS");
+            characterCube.HP = characterCube.backUpHP;
+            SceneManager.LoadScene(characterCube.bossBuildIndex);
         }
     }
 }
