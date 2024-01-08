@@ -100,8 +100,6 @@ public class boss6 : MonoBehaviour
 
     void winScreenChecker()
     {
-        bossCheckIndicator.deafetedBossTextChecker();
-
         bossCheckIndicator.boss6Check = true;
         if (bossCheckIndicator.boss6Check == true && bossCheckIndicator.allBossesDead == true)
         {
