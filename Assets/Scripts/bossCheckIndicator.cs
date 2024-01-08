@@ -35,7 +35,7 @@ public class bossCheckIndicator : MonoBehaviour
         deafetedBossTextChecker();
     }
 
-    void deafetedBossTextChecker()
+    public void deafetedBossTextChecker()
     {
         if (boss1Check == true) boss1Text.text = ("BOSS 1 IS DEAD");
         else if (boss1Check == false) boss1Text.text = ("BOSS 1 IS ALIVE");
