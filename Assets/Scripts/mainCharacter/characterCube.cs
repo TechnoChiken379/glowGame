@@ -52,6 +52,7 @@ public class characterCube : MonoBehaviour
         {
             SceneManager.LoadScene("deathScreen");
             HP = backUpHP;
+            Debug.Log(bossBuildIndex);
         }
 
         if (Input.GetKey(KeyCode.Escape))
