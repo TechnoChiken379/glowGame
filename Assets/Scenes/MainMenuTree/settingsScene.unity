@@ -364,6 +364,8 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
+  devTool: {fileID: 0}
+  difficultieIndicator: {fileID: 0}
 --- !u!1001 &917923326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -869,6 +871,8 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
+  devTool: {fileID: 0}
+  difficultieIndicator: {fileID: 0}
 --- !u!1001 &1151370956
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1045,6 +1049,8 @@ MonoBehaviour:
   easyButton: {fileID: 1151370957}
   mediumButton: {fileID: 1124213836}
   hardButton: {fileID: 881751144}
+  devTool: {fileID: 0}
+  difficultieIndicator: {fileID: 0}
 --- !u!1 &2097002965
 GameObject:
   m_ObjectHideFlags: 0
