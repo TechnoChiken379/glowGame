@@ -96,13 +96,13 @@ public class boss1 : MonoBehaviour
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 2;
 
+            bossCheckIndicator.boss1Check = true;
+
             if (bossCheckIndicator.allBossesDead == true)
             {
                 SceneManager.LoadScene("epicWinScreen");
             }
             else SceneManager.LoadScene("winScreen");
-
-            bossCheckIndicator.boss1Check = true;
         }
     }
 }
