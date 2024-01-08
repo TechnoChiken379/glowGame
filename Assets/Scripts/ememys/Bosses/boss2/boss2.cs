@@ -41,6 +41,8 @@ public class boss2 : MonoBehaviour
     {
         bossFightingTimer.bossFightingTimerFLOAT += Time.deltaTime;
         bossFightingTimer.bossFightingTimerINT = Mathf.FloorToInt(bossFightingTimer.bossFightingTimerFLOAT);
+        bossFightingTimerInBoss.bossFightingTimerFLOAT += Time.deltaTime;
+        bossFightingTimerInBoss.bossFightingTimerINT = Mathf.FloorToInt(bossFightingTimer.bossFightingTimerFLOAT);
 
         timer += Time.deltaTime;
         Move();
