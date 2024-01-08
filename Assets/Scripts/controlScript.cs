@@ -21,6 +21,7 @@ public class controlScript : MonoBehaviour
     public Button easyButton;
     public Button mediumButton;
     public Button hardButton;
+    public Button devTool;
 
     public difficultieIndicator difficultieIndicator;
 
@@ -29,6 +30,7 @@ public class controlScript : MonoBehaviour
         easyButton.onClick.AddListener(easyModeSettings);
         mediumButton.onClick.AddListener(mediumModeSettings);
         hardButton.onClick.AddListener(hardModeSettings);
+        devTool.onClick.AddListener(devToolSettings);
 
         if (easyMode == false && mediumMode == false && hardMode == false)
         {
@@ -62,6 +64,11 @@ public class controlScript : MonoBehaviour
         hardMode = true;
 
         settingsChecker();
+    }
+
+    public void devToolSettings()
+    {
+
     }
 
     private void settingsChecker()
