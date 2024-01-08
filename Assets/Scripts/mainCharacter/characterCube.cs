@@ -114,14 +114,14 @@ public class characterCube : MonoBehaviour
 
         if (Input.GetKey(KeyCode.End))
         {
-            boss1.SQHP = 0;
-            boss2.IBHP = 0;
-            boss3.TGHP = 0;
-            boss4a.CGHP = 0;
-            boss4b.CGHP = 0;
-            boss4c.CGHP = 0;
-            boss5.MSHP = 0;
-            boss6.RicardoHP = 0;
+            boss1.SQHP = 1;
+            boss2.IBHP = 1;
+            boss3.TGHP = 1;
+            boss4a.CGHP = 1;
+            boss4b.CGHP = 1;
+            boss4c.CGHP = 1;
+            boss5.MSHP = 1;
+            boss6.RicardoHP = 1;
         }
     }
 }

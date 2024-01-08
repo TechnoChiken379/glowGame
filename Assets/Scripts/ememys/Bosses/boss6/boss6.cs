@@ -31,6 +31,8 @@ public class boss6 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossCheckIndicator.boss6Check = false;
+
         RicardoHP = RicardoMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
@@ -87,15 +89,22 @@ public class boss6 : MonoBehaviour
         {
             bossCheckIndicator.boss6Check = true;
 
-            Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 6;
 
-            if (bossCheckIndicator.allBossesDead == true)
-            {
-                SceneManager.LoadScene("epicWinScreen");
-            }
-            else SceneManager.LoadScene("winScreen");
+            winScreenChecker();
+        }
+    }
+
+    void winScreenChecker()
+    {
+        if (bossCheckIndicator.boss6Check == true && bossCheckIndicator.allBossesDead == true)
+        {
+            SceneManager.LoadScene("epicWinScreen");
+        }
+        else if (bossCheckIndicator.boss6Check == true && bossCheckIndicator.allBossesDead == false)
+        {
+            SceneManager.LoadScene("winScreen");
         }
     }
 }

@@ -21,6 +21,8 @@ public class boss5 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossCheckIndicator.boss5Check = false;
+
         MSHP = MSMaxHP;
 
         player = GameObject.FindGameObjectWithTag("mainCharacter").transform;
@@ -64,15 +66,22 @@ public class boss5 : MonoBehaviour
         {
             bossCheckIndicator.boss5Check = true;
 
-            Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 6;
 
-            if (bossCheckIndicator.allBossesDead == true)
-            {
-                SceneManager.LoadScene("epicWinScreen");
-            }
-            else SceneManager.LoadScene("winScreen");
+            winScreenChecker();
+        }
+    }
+
+    void winScreenChecker()
+    {
+        if (bossCheckIndicator.boss5Check == true && bossCheckIndicator.allBossesDead == true)
+        {
+            SceneManager.LoadScene("epicWinScreen");
+        }
+        else if (bossCheckIndicator.boss5Check == true && bossCheckIndicator.allBossesDead == false)
+        {
+            SceneManager.LoadScene("winScreen");
         }
     }
 }

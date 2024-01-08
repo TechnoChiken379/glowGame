@@ -13,6 +13,8 @@ public class enemyHealthBar4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bossCheckIndicator.boss4Check = false;
+
         xScale = 35.6f;
     }
 
@@ -30,16 +32,22 @@ public class enemyHealthBar4 : MonoBehaviour
         {
             bossCheckIndicator.boss4Check = true;
 
-            Destroy(gameObject);
             characterCube.HP = characterCube.backUpHP;
             characterCube.bossBuildIndex = 5;
 
-            if (bossCheckIndicator.allBossesDead == true)
+            winScreenChecker();
+        }
+
+        void winScreenChecker()
+        {
+            if (bossCheckIndicator.boss4Check == true && bossCheckIndicator.allBossesDead == true)
             {
                 SceneManager.LoadScene("epicWinScreen");
             }
-            else SceneManager.LoadScene("winScreen");
+            else if (bossCheckIndicator.boss4Check == true && bossCheckIndicator.allBossesDead == false)
+            {
+                SceneManager.LoadScene("winScreen");
+            }
         }
-
     }
 }
