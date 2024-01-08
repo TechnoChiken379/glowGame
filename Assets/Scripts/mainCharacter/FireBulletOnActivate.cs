@@ -65,6 +65,8 @@ public class FireBulletOnActivate : MonoBehaviour
             spawnedBullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * fireSpeed;
             Destroy(spawnedBullet, bulletLifeTime);
             timer = 0f;
+            //sniperTimer = 0f;
+            //shotGunTimer = 0f;
         }
     }
 
@@ -75,7 +77,9 @@ public class FireBulletOnActivate : MonoBehaviour
             GameObject spawnedBullet = Instantiate(bullet, bulletSpawnPoint.position, Quaternion.identity);
             spawnedBullet.GetComponent<Rigidbody2D>().velocity = bulletSpawnPoint.right * sniperFireSpeed;
             Destroy(spawnedBullet, sniperBulletLifeTime);
+            //timer = 0f;
             sniperTimer = 0f;
+            //shotGunTimer = 0f;
         }
     }
 
@@ -100,7 +104,9 @@ public class FireBulletOnActivate : MonoBehaviour
                 spawnedBullet.GetComponent<Rigidbody2D>().velocity = fireDirection.normalized * shotGunFireSpeed;//
                 Destroy(spawnedBullet, shotGunBulletLifeTime);//
             }
-            shotGunTimer = 0f;//
+            //timer = 0f;
+            //sniperTimer = 0f;
+            shotGunTimer = 0f;
         }
     }
 }
