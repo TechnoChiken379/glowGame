@@ -113,6 +113,39 @@ public class characterCube : MonoBehaviour
             sniper.SetActive(true);
         }
 
+
+
+        if (hotKey3 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = true;
+            hotKey2 = false;
+            hotKey3 = false;
+
+            pistol.SetActive(true);
+            shotGun.SetActive(false);
+            sniper.SetActive(false);
+        }
+        else if (hotKey1 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = false;
+            hotKey2 = true;
+            hotKey3 = false;
+
+            pistol.SetActive(false);
+            shotGun.SetActive(true);
+            sniper.SetActive(false);
+        }
+        else if (hotKey2 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = false;
+            hotKey2 = false;
+            hotKey3 = true;
+
+            pistol.SetActive(false);
+            shotGun.SetActive(false);
+            sniper.SetActive(true);
+        }
+
         if (Input.GetKey(KeyCode.End))
         {
             boss1.SQHP = 1;
