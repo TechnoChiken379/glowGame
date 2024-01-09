@@ -5380,6 +5380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1551454192354147477}
   - component: {fileID: 9173129332992389413}
+  - component: {fileID: 9166492759732282065}
   m_Layer: 7
   m_Name: MiddlePoint
   m_TagString: Untagged
@@ -5412,9 +5413,21 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5390873836932265223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1582194c4a494be478081a5712b5a4de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &9166492759732282065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390873836932265223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f41acf168deba1348b743e6d30a7173c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5429133313911909168
@@ -6054,6 +6067,7 @@ MonoBehaviour:
   easyButton: {fileID: 0}
   mediumButton: {fileID: 0}
   hardButton: {fileID: 0}
+  difficultieIndicator: {fileID: 0}
 --- !u!1 &5649198017205353146
 GameObject:
   m_ObjectHideFlags: 0

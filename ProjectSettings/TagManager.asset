@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - mainCharacter
   - border
+  - enemy1
   layers:
   - Default
   - TransparentFX

@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
-using Unity.VisualScripting.Dependencies.Sqlite;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class shoutDamageScript : MonoBehaviour

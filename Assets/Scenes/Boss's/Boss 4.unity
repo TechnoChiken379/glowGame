@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 156266611}
   m_Layer: 10
   m_Name: Celestial Guardian
-  m_TagString: Untagged
+  m_TagString: enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3630,7 +3630,7 @@ GameObject:
   - component: {fileID: 836482322}
   m_Layer: 10
   m_Name: Celestial Guardian
-  m_TagString: Untagged
+  m_TagString: enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7488,7 +7488,7 @@ GameObject:
   - component: {fileID: 1634713093}
   m_Layer: 10
   m_Name: Celestial Guardian
-  m_TagString: Untagged
+  m_TagString: enemy1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
