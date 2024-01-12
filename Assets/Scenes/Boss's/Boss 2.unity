@@ -923,6 +923,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63010e6fdd72c154fb02c4c363e18f4d, type: 3}
+--- !u!1 &704149664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8793455781514137690, guid: 63010e6fdd72c154fb02c4c363e18f4d, type: 3}
+  m_PrefabInstance: {fileID: 704149663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705767734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,6 +1202,7 @@ GameObject:
   - component: {fileID: 910052480}
   - component: {fileID: 910052479}
   - component: {fileID: 910052482}
+  - component: {fileID: 910052483}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1300,6 +1306,19 @@ MonoBehaviour:
   L4Button: {fileID: 0}
   L5Button: {fileID: 0}
   L6Button: {fileID: 0}
+--- !u!114 &910052483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910052478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 533cc027cc41ea94baefbacab036548e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 704149664}
 --- !u!1 &949725904
 GameObject:
   m_ObjectHideFlags: 0

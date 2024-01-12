@@ -28,6 +28,8 @@ public class characterCube : MonoBehaviour
     boss5 boss5;
     boss6 boss6;
 
+    public static bool muteTheGame = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -157,6 +159,15 @@ public class characterCube : MonoBehaviour
             boss4c.CGHP = 1;
             boss5.MSHP = 1;
             boss6.RicardoHP = 1;
+        }
+
+        if (!MuteGame.muteTheGame)
+        {
+            muteTheGame = false;
+        }
+        else
+        {
+            muteTheGame = true;
         }
     }
 }
