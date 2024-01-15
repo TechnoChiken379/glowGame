@@ -85,7 +85,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4671936628262320681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +115,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4331ee4dc10df8744b73793f0e85a9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterCube: {fileID: 0}
+  bossCheckIndicator: {fileID: 0}
+  restartGameButton: {fileID: 0}
+  Button: {fileID: 0}
+  L1Button: {fileID: 0}
+  L2Button: {fileID: 0}
+  L3Button: {fileID: 0}
+  L4Button: {fileID: 0}
+  L5Button: {fileID: 0}
+  L6Button: {fileID: 0}
 --- !u!1001 &1805423725850472949
 PrefabInstance:
   m_ObjectHideFlags: 0
