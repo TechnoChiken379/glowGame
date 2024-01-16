@@ -1712,7 +1712,7 @@ RectTransform:
   m_GameObject: {fileID: 1650496305}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalScale: {x: 1.85, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 956037879}
@@ -2020,7 +2020,7 @@ RectTransform:
   m_GameObject: {fileID: 1733612880}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.6, z: 1}
+  m_LocalScale: {x: 1.85, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 956037879}
@@ -2633,7 +2633,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3908414053293275495, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
       propertyPath: delayBeforeStart
-      value: 0.35
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3908414053293275495, guid: e9824f55611d97840bd64bef4ce720ec, type: 3}
       propertyPath: lettersPerSecond
