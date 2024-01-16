@@ -116,38 +116,38 @@ public class characterCube : MonoBehaviour
         }
 
 
-        ////space
-        //if (hotKey3 && Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    hotKey1 = true;
-        //    hotKey2 = false;
-        //    hotKey3 = false;
+        //space
+        if (hotKey3 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = true;
+            hotKey2 = false;
+            hotKey3 = false;
 
-        //    pistol.SetActive(true);
-        //    shotGun.SetActive(false);
-        //    sniper.SetActive(false);
-        //}
-        //else if (hotKey1 && Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    hotKey1 = false;
-        //    hotKey2 = true;
-        //    hotKey3 = false;
+            pistol.SetActive(true);
+            shotGun.SetActive(false);
+            sniper.SetActive(false);
+        }
+        else if (hotKey1 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = false;
+            hotKey2 = true;
+            hotKey3 = false;
 
-        //    pistol.SetActive(false);
-        //    shotGun.SetActive(true);
-        //    sniper.SetActive(false);
-        //}
-        //else if (hotKey2 && Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    hotKey1 = false;
-        //    hotKey2 = false;
-        //    hotKey3 = true;
+            pistol.SetActive(false);
+            shotGun.SetActive(true);
+            sniper.SetActive(false);
+        }
+        else if (hotKey2 && Input.GetKeyDown(KeyCode.Space))
+        {
+            hotKey1 = false;
+            hotKey2 = false;
+            hotKey3 = true;
 
-        //    pistol.SetActive(false);
-        //    shotGun.SetActive(false);
-        //    sniper.SetActive(true);
-        //}
-        ////space
+            pistol.SetActive(false);
+            shotGun.SetActive(false);
+            sniper.SetActive(true);
+        }
+        //space
 
         if (Input.GetKey(KeyCode.End))
         {
