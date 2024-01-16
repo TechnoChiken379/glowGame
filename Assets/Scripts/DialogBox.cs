@@ -6,19 +6,22 @@ public class DialogBox : MonoBehaviour
 {
     [SerializeField] int lettersPerSecond;
     [SerializeField] TextMeshProUGUI welcomeText;
-    [SerializeField] float delayBeforeStart = 0f;
+    [SerializeField] float delayBeforeStart = 1f;
+    [SerializeField] string theText;
 
     // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(StartDialogAfterDelay());
+        theText = welcomeText.text;
+        welcomeText.text = "";
     }
 
     IEnumerator StartDialogAfterDelay()
     {
         yield return new WaitForSeconds(delayBeforeStart);
         
-        string text = welcomeText.text;
+        string text = theText;
         StartCoroutine(TypeDialog(text));
     }
 

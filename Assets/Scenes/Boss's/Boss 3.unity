@@ -217,15 +217,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1656893873493864677, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4576976613811005653, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
       propertyPath: m_Name
       value: ScreenTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 4788338654820487680, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4995864445632601254, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5422408267879381669, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -265,6 +269,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5422408267879381669, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902335865880177664, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9089005248496941469, guid: 1da43116bc1abc44996cb4e892419f2f, type: 3}

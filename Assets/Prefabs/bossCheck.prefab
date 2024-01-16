@@ -147,9 +147,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 8826904901726640204}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &6451247287673943652
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,9 +298,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 5641849671590480289}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &7471087415434253024
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,9 +449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 315351429312340810}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &8009498251918927290
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,9 +600,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 8735639852451219064}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &8448386074792855297
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,9 +751,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 9209816452051232645}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &8589107696346563875
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,9 +902,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e0e4eba7e4184cade6c442b3670d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lettersPerSecond: 20
+  lettersPerSecond: 100
   welcomeText: {fileID: 4251458281979570559}
-  delayBeforeStart: 0.99
+  delayBeforeStart: 0
+  theText: 
 --- !u!1 &9043670440434860108
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,14 +957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boss1Text: {fileID: 8735639852451219064}
-  boss1Check: 0
   boss2Text: {fileID: 315351429312340810}
-  boss2Check: 0
   boss3Text: {fileID: 9209816452051232645}
-  boss3Check: 0
   boss4Text: {fileID: 8826904901726640204}
-  boss4Check: 0
   boss5Text: {fileID: 4251458281979570559}
-  boss5Check: 0
   boss6Text: {fileID: 5641849671590480289}
-  boss6Check: 0
