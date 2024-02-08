@@ -12,22 +12,33 @@ public class damageScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (characterCube.hotKey1)
+        {
+            damageAmount = 1f;
+        }
+        else if (characterCube.hotKey2)
+        {
+            damageAmount = 0.6f;
+        }
+        else if (characterCube.hotKey3)
+        {
+            damageAmount = 6f;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (characterCube.hotKey1)
-        {
-            damageAmount = 1f;
-        } else if (characterCube.hotKey2)
-        {
-            damageAmount = 0.6f;
-        } else if (characterCube.hotKey3)
-        {
-            damageAmount = 6f;
-        }
+        //if (characterCube.hotKey1)
+        //{
+        //    damageAmount = 1f;
+        //} else if (characterCube.hotKey2)
+        //{
+        //    damageAmount = 0.6f;
+        //} else if (characterCube.hotKey3)
+        //{
+        //    damageAmount = 6f;
+        //}
     }
 
     //void OnCollisionEnter2D(Collision2D collision)
